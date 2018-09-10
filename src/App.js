@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
-import './styles/App.css';
 
-// component imports
+// import my components
 import {Heading} from './components/Heading';
+import {About} from './components/About';
 
+// import material-ui
+import CssBaseline from '@material-ui/core/CssBaseline';
+
+// import styles
+import './styles/App.css';
 
 class App extends Component {
   state = {
-    firstName : 'Marshall',
-    lastName : 'Slemp'
+  
   }
 
   render() {
     return (
-      <Heading name={`${this.state.firstName} ${this.state.lastName} `}/>
+      <div>
+        <CssBaseline />
+        <Heading name='Marshall Slemp'/>
+        <About />
+      </div>
     )
   }
 }
