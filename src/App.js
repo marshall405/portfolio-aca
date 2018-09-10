@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
+
+// component imports
+import {Heading} from './components/Heading';
+
 
 class App extends Component {
+  state = {
+    firstName : 'Marshall',
+    lastName : 'Slemp'
+  }
+
   render() {
     return (
-      <div className="App">
-        <h1> marshall slemp </h1>
-      </div>
-    );
+      <Heading name={`${this.state.firstName} ${this.state.lastName} `}/>
+    )
   }
 }
 
