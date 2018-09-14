@@ -2,14 +2,15 @@
     display: flex;
     justify-content: space-between;
 }
-
+h1 {
+    font-size: 44px;
+}
 
 
 a {
     padding: 0;
 }
 img {
-
     margin: 5px;
     height: 24px;
 }

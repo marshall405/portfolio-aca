@@ -1,7 +1,21 @@
 .section {
-  width: 500px;
-  margin: 100px auto 10px auto;
+  width: 800px;
+  margin: 150px auto 10px auto;
 }
 .section > div {
-  margin: 50px 0;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+.section > div {
+  background-color:#313235;
+  /* background-color: #072f70; */
+  color: white;
+}
+
+h2 {
+  text-decoration-line: underline;
+  text-decoration-color: white;
+  padding: 0;
+  margin: 0;
 }
