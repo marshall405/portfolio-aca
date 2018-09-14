@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // import my components
 import {Heading} from './components/Heading';
 import {About} from './components/About';
+import {Projects} from './components/Projects';
 
 // import material-ui
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -20,7 +21,10 @@ class App extends Component {
       <div>
         <CssBaseline />
         <Heading name='Marshall Slemp'/>
-        <About />
+        <div className='section'>
+          <About />
+          <Projects />
+        </div>
       </div>
     )
   }

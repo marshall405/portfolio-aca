@@ -2,3 +2,14 @@
     display: flex;
     justify-content: space-between;
 }
+
+
+
+a {
+    padding: 0;
+}
+img {
+
+    margin: 5px;
+    height: 24px;
+}
