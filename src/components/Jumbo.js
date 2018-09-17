@@ -10,13 +10,13 @@ export class Jumbo extends React.Component {
             return (
                 <div className='jumbo'>
                     <h1><span>M</span>arshall <span>S</span>lemp</h1>
-                 </div>
+                </div>
             )
         } else {
             return (
                 <div className='jumbo'>
                     <h1>{this.props.name}</h1>
-                 </div>
+                </div>
             )
         }
         
