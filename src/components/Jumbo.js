@@ -10,13 +10,15 @@ export class Jumbo extends React.Component {
         if(this.props.name === 'Marshall Slemp'){
             return (
                 <div className='jumbo'>
-                    <h1><span>M</span>arshall <span>S</span>lemp</h1>
+                    <h1 onMouseEnter={() => this.props.mouseOver()}>
+                        <span>M</span>arshall <span>S</span>lemp
+                    </h1>
                 </div>
             )
         } else {
             return (
                 <div className='jumbo'>
-                    <h1>{this.props.name}</h1>
+                    <h1 onClick={() => this.props.onClick()} onMouseLeave={() => this.props.mouseOut()}><a href='#contact'>{this.props.name}</a></h1>
                 </div>
             )
         }
