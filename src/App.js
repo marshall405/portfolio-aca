@@ -39,8 +39,8 @@ class App extends Component {
         
         <Jumbo name={this.state.name}/>
         <div className='section container'>
-          <Skills />
           <About />
+          <Skills />
           <Projects />
         </div>
         <div className='footer'>
