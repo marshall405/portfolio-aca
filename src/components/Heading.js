@@ -10,9 +10,12 @@ import Toolbar from '@material-ui/core/Toolbar';
 export class Heading extends React.Component {
     render() {
         return (
-            <Toolbar className='flex-container heading'>
+            <Toolbar className='flex-container header container'>
                     <div id='name'>
                         {this.props.name}
+                    </div>
+                    <div id='input' className='container'>
+                        <input type='text' placeholder='change name' onChange={(e) => this.props.handleChange(e)}/>
                     </div>
                     <div className='social-links'>
                         <a href='https://www.linkedin.com/in/marshall-slemp/'>

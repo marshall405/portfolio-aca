@@ -3,9 +3,10 @@ import React from 'react';
 export class Jumbo extends React.Component {
 
     formatName(){
-  
+        console.log(this.props.name)
     }
     render() {
+        
         if(this.props.name === 'Marshall Slemp'){
             return (
                 <div className='jumbo'>

@@ -5,6 +5,7 @@ import {Heading} from './components/Heading';
 import {About} from './components/About';
 import {Projects} from './components/Projects';
 import {Jumbo} from './components/Jumbo';
+import {Skills} from './components/Skills';
 // import material-ui
 import CssBaseline from '@material-ui/core/CssBaseline';
 
@@ -12,9 +13,16 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import './styles/App.css';
 
 class App extends Component {
-  state = {
-    name : 'Marshall Slemp'
+  constructor(props) {
+    super(props);
+
+
+    this.state = {
+      name : 'Marshall Slemp'
+    }
+    this.handleChange = this.handleChange.bind(this);
   }
+  
   handleChange(e){
     if(e.target.value === ''){
       this.setState({name : 'Marshall Slemp'});
@@ -27,14 +35,16 @@ class App extends Component {
     return (
       <div>
         <CssBaseline />
-        <Heading name='MS'/>
-        <div id='input'>
-          <input type='text' placeholder='change name' onChange={(e) => this.handleChange(e)}/>
-        </div>
+        <Heading name='MS' handleChange={this.handleChange}/>
+        
         <Jumbo name={this.state.name}/>
-        <div className='section'>
+        <div className='section container'>
+          <Skills />
           <About />
           <Projects />
+        </div>
+        <div className='footer'>
+          <h6> designed and developed by marshall 2018</h6>
         </div>
       </div>
     )

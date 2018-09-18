@@ -7,7 +7,7 @@ export class Projects extends React.Component {
     render(){
         return (
             <div className='projects-container'>
-                <h2> Projects </h2>
+                <h1> Projects </h1>
                 <GridList>
                     <GridListTile>
                         <h5> Simple To Do List </h5>
