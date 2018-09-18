@@ -12,7 +12,7 @@ export class Jumbo extends React.Component {
                 <div className='jumbo'>
                     <h1 onMouseEnter={() => this.props.mouseOver()}>
                         <span>M</span>arshall <span>S</span>lemp
-                    </h1>
+                    </h1> 
                 </div>
             )
         } else {

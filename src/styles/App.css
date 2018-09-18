@@ -31,7 +31,7 @@ a:active {
     text-decoration: inherit;
     font-weight: inherit;
 }
-img {
+.social-links img {
   margin: 5px;
   height: 24px;
 }
@@ -150,6 +150,19 @@ input:focus {
   display: inline;
   margin: 10px;
 }
+
+
+/*        PROJECTS          */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.projects-container img {
+  width: 100%;
+}
+
+
 
 /*        FOOTER           */
 
