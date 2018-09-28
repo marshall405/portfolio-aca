@@ -11,12 +11,12 @@ const tileData = [
     {
         img : colorMashImg,
         title : 'Color Mash',
-        src : '../../public/colorMash/index.html'
+        href : 'https://htmlpreview.github.io/?https://github.com/marshall405/colorMash/blob/master/index.html'
     },
     {
         img : todolistImg,
         title : 'To Do List',
-        src : ''
+        href : '../todolist/build/index.html'
     }
 ]
 export class Projects extends React.Component {
@@ -30,7 +30,7 @@ export class Projects extends React.Component {
                         {tileData.map(tile => (
                             
                             <GridListTile key={tile.img}>
-                                <a href={tile.src}><img src={tile.img} alt={tile.title}/></a>
+                                <a href={tile.href}><img src={tile.img} alt={tile.title}/></a>
                                 <GridListTileBar title={tile.title}/>
                             </GridListTile>
                         
