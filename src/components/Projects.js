@@ -16,7 +16,7 @@ const tileData = [
     {
         img : todolistImg,
         title : 'To Do List',
-        href : '../todolist/build/index.html'
+        href : 'https://marshall405.github.io/todolist/'
     }
 ]
 export class Projects extends React.Component {
