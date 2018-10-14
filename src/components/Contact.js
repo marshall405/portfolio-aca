@@ -11,14 +11,14 @@ export class Contact extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='contact-modal'>
             <div  id='contact' onClick={() => this.props.onClick()}> 
             </div>
             <div className='contact-container'>
                 <div style={XDivStyle}> 
                     <h2 className='contact-X' onClick={() => this.props.onClick()}>X</h2>
                 </div>
-                <div className='center'>
+                <div className='contact-center'>
                     <h1> Contact Me </h1>
                     <p> 405-919-2960 </p>
                     <p><a href='mailto:marshall.slemp@gmail.com'>marshall.slemp@gmail.com</a></p>
