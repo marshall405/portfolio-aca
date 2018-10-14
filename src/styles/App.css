@@ -168,7 +168,7 @@ input:focus {
   /*   PROFILE PICTURE    */
 
   .profile-pic {
-    width: 30%;
+    width: 100%;
     border-radius: 10px;
   }
 
