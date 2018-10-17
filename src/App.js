@@ -64,7 +64,7 @@ class App extends Component {
         <div>
         <CssBaseline />
         <Contact onClick={this.onClick}/>
-        <Heading name='MS' handleChange={this.handleChange}/>
+        <Heading name='MS' handleChange={this.handleChange} onClick={this.onClick}/>
         <Jumbo name={this.state.name} mouseOver={this.mouseOver} mouseOut={this.mouseOut} onClick={this.onClick}/>
         <div className='section container'>
           <About />
@@ -80,15 +80,13 @@ class App extends Component {
     return (
       <div>
         <CssBaseline />
-        <Heading name='MS' handleChange={this.handleChange}/>
-        <ContactMe onClick={this.onClick}/>
+        <Heading name='MS' handleChange={this.handleChange} onClick={this.onClick}/>
         <Jumbo name={this.state.name} mouseOver={this.mouseOver} mouseOut={this.mouseOut} onClick={this.onClick}/>
         <div className='section container'>
           <About windowWidth={this.state.width}/>
           <Skills />
           <Projects />
         </div>
-        <ContactMe onClick={this.onClick}/>
         <div className='footer'>
           <h6> designed and developed by marshall 2018</h6>
         </div>

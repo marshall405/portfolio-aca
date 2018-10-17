@@ -11,13 +11,13 @@ export class Heading extends React.Component {
     render() {
         return (
             <Toolbar className='flex-container header container'>
-                    <div id='name'>
-                        {this.props.name}
+                    <div id='name' style={{width: 100}} >
+                        <h1 style={{cursor: 'pointer'}}onClick={this.props.onClick}>{this.props.name}</h1>
                     </div>
                     <div id='input' className='container'>
                         <input type='text' placeholder='change name' onChange={(e) => this.props.handleChange(e)}/>
                     </div>
-                    <div className='social-links'>
+                    <div className='social-links' style={{width: 100}}>
                         <a href='https://www.linkedin.com/in/marshall-slemp/'>
                             <img src={linkedInLogo} alt='linkedIN' />
                         </a>

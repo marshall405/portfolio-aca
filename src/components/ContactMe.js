@@ -5,9 +5,8 @@ const contactStyle = {
    
     cursor: 'pointer',
     fontSize: 18,
-    width: 150,
+    width: 250,
     textAlign: 'center',
-    margin: '0px auto',
     borderRadius: 10
 }
 export class ContactMe extends React.Component {

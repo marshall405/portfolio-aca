@@ -51,7 +51,9 @@ a:active {
   height: 24px;
 }
 .contact-me {
-  position: relative;
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
   padding: 5px;
   border: 1px solid rgba(255, 255, 255, 0);
   transition: all .2s ease-in-out;
@@ -65,11 +67,9 @@ a:active {
 /*        INPUT             */
 #input {
   text-align: center;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  margin: 0;
-
+  /* position: absolute; */
+  width: 50%;
+  margin: 0 auto;
 }
 #input input {
   margin: 0;
@@ -78,6 +78,7 @@ a:active {
   border-radius: 5px;
   width: 200px;
   font-size: 16px;
+  
 }
 input:focus {
   outline: none;
@@ -96,6 +97,7 @@ input:focus {
   justify-content: space-around;
   background-color: #413f3f;
   color: white;
+  position: relative;
 }
 .jumbo h1 {
   text-align: center;
