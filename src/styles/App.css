@@ -50,11 +50,6 @@ html {
   position: absolute;
   top: 0px;
   height: 75px;
-  border-radius: 10px;
-  border-right: 1px solid #1bd6cf;
-  border-bottom: 1px solid #1bd6cf;
-  border-left: 1px solid #1bd6cf;
-
 }
 
 a,
@@ -112,6 +107,7 @@ a:active {
 .jumbo > h1 {
   font-size: 64px;
   width: 100%;
+  text-shadow: 0px 0px 100px #1bd6cf; 
 }
 .jumbo span {
   text-decoration-line: underline;
@@ -264,10 +260,7 @@ a:active {
     text-decoration: #1bd6cf underline;
   }
 
-  .social-links img {
-    margin: 2px;
-    height: 16px;
-  }
+  
   
 /* END HEADER */
 /* JUMBO */
