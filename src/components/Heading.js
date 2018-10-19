@@ -1,8 +1,8 @@
 import React from 'react';
-import linkedInLogo from '../images/In-Black-28px-R.png';
-import GitHubLogo from '../images/GitHub-Mark-32px.png';
-// import material-ui
-import Toolbar from '@material-ui/core/Toolbar';
+import linkedInLogo from '../images/ln-white.png';
+import GitHubLogo from '../images/gh-white.png';
+
+
 
 
 
@@ -10,22 +10,18 @@ import Toolbar from '@material-ui/core/Toolbar';
 export class Heading extends React.Component {
     render() {
         return (
-            <Toolbar className='flex-container header container'>
-                    <div id='name' style={{maxWidth: 100}} >
-                        <h1 style={{cursor: 'pointer'}}onClick={this.props.onClick}>{this.props.name}</h1>
-                    </div>
-                    <div id='input' className='container'>
-                        <input type='text' placeholder='change name' onChange={(e) => this.props.handleChange(e)}/>
-                    </div>
-                    <div className='social-links' style={{maxWidth: 100}}>
-                        <a href='https://www.linkedin.com/in/marshall-slemp/'>
-                            <img src={linkedInLogo} alt='linkedIN' />
-                        </a>
-                        <a href='https://github.com/marshall405'>
-                            <img src={GitHubLogo} alt='GitHub' />
-                        </a>
-                    </div>
-            </Toolbar>
+            <div className='flex-container header container'>  
+                <h1 className='logoMS' onClick={this.props.onClick}>MS</h1>
+                <h1 onClick={this.props.onClick} className='contact-me'>Contact Me </h1>
+                <div className='social-links'>
+                    <a href='https://www.linkedin.com/in/marshall-slemp/'>
+                        <img src={linkedInLogo} alt='linkedIN' />
+                    </a>
+                    <a href='https://github.com/marshall405'>
+                        <img src={GitHubLogo} alt='GitHub' />
+                    </a>
+                </div>
+            </div>
         )
     }
 }

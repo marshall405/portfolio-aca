@@ -59,14 +59,13 @@ export class Skills extends React.Component {
                     color:'white', 
                     borderRadius: 10}}>
                     <h6 style={{
-                        width: '70%',
+                        width: '50%',
                         margin: '0 auto',
                         textAlign:'center', 
                         padding: 20, 
                         fontSize: 12
                         }}> All skills require practice and consistency. <br />
                         I strive to learn everyday, improve my current skills and gain new skills.<br /> 
-                        Jack of all trades, master of none! 
                     </h6>
                 </div>
             </div>

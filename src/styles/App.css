@@ -7,7 +7,6 @@ html {
 .container {
   max-width: 700px;
   margin: 0 auto;
-  
 }
  ul, li, h4, h5, h6 {
    margin: 0;
@@ -25,18 +24,39 @@ html {
  }
 
 /*          HEADING        */
-#name {
+.logoMS {
+  width: 110px;
   font-size: 22px;
   text-decoration: #1bd6cf underline;
 }
+.social-links {
+  width: 150px;
+  height: 100%;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+.contact-me {
+  font-size: 18px;
+  width: 250px;
+}
 .flex-container {
-  
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-a {
-  padding: 0;
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  height: 75px;
+  border-radius: 10px;
+  border-right: 1px solid #1bd6cf;
+  border-bottom: 1px solid #1bd6cf;
+  border-left: 1px solid #1bd6cf;
+
 }
+
 a,
 a:link,
 a:visited,
@@ -46,49 +66,32 @@ a:active {
     text-decoration: inherit;
     font-weight: inherit;
 }
+
 .social-links img {
-  margin: 5px;
   height: 24px;
+  width: 28px;
 }
-.contact-me {
-  position: absolute;
-  top: 0;
-  margin: 0 auto;
-  padding: 5px;
-  border: 1px solid rgba(255, 255, 255, 0);
-  transition: all .2s ease-in-out;
-}
-.contact-me:hover {
-  background-color: #413f3f;
-  color: white;
-  border: 1px solid #1bd6cf;
-  padding: 20px 5px;
-}
-/*        INPUT             */
-#input {
+.social-links a {
+  display: inline-block;
   text-align: center;
-  /* position: absolute; */
-  width: 50%;
-  margin: 0 auto;
-}
-#input input {
-  margin: 0;
-  text-align: center;
-  border: 1px solid #1bd6cf;
-  border-radius: 5px;
-  max-width: 200px;
-  font-size: 16px;
   
 }
-input:focus {
-  outline: none;
+.contact-me, .social-links a, .logoMS {
+  padding: 5px 10px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  transition: all .2s ease-in-out;
 }
+.contact-me:hover, .social-links a:hover, .logoMS:hover {
+  color: white;
+  border: 1px solid #1bd6cf;
+  padding: 20px 10px;
+}
+
 /*        JUMBO            */
-
-
 .jumbo {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   border-bottom: 10px solid #1bd6cf;
   border-top: 10px solid #1bd6cf;
   margin: 0px 0px;
@@ -104,12 +107,11 @@ input:focus {
   font-weight: lighter;
   margin: 0;
   letter-spacing: 5px;
+  cursor: pointer;
+}
+.jumbo > h1 {
   font-size: 64px;
   width: 100%;
-}
-
-.jumbo h1:hover {
-  cursor: pointer;
 }
 .jumbo span {
   text-decoration-line: underline;
@@ -257,7 +259,7 @@ input:focus {
 
 
 /*  HEADER  */
-  #name {
+  .logoMS {
     font-size: 16px;
     text-decoration: #1bd6cf underline;
   }
@@ -269,7 +271,7 @@ input:focus {
   
 /* END HEADER */
 /* JUMBO */
-  .jumbo h1 {
+  .jumbo > h1 {
     font-size: 34px;
   }
 /* END JUMBO */
@@ -295,7 +297,19 @@ input:focus {
 
 
 @media only screen and (max-width: 510px) {
-  .jumbo h1 {
+  .jumbo > h1 {
     font-size: 44px;
   }
+}
+
+@media only screen and (max-width: 320px) {
+  .jumbo > h1 {
+    font-size: 22px;
+  }
+  .logoMS h1 {
+    font-size: 14px;
+  }
+ .contact-me {
+   font-size: 14px;
+ }
 }
