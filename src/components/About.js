@@ -13,12 +13,12 @@ const greetingStyle = {
 export class About extends React.Component {
     render() {
         return (
-            <div className='about-container'>
+            <div id='about' className='about-container'>
                <h1> About Me </h1>
                <div className='inner-about-container'>
                     <img className='profile-pic' src={CaboPic} alt='cabo :)'/>
                     <div>
-                        <p style={greetingStyle}> Hello, my name is Marshall and I am a self-taught web developer...</p>
+                        <p style={greetingStyle}> Hello, my name is Marshall and I am working on becoming a web developer...</p>
                         <Timeline windowWidth={this.props.windowWidth}/>
                     </div>
                 </div>

@@ -37,7 +37,7 @@ const projects = [
 export class Projects extends React.Component {
     render(){
         return (
-            <div className='projects-container'>
+            <div id='projects' className='projects-container'>
                 <h1> Projects </h1>
                 <div className='projects'>
 

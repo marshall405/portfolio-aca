@@ -58,12 +58,12 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <div id='top'>
       <CssBaseline />
       {this.isContact()}
-      <Jumbo name={this.state.name} mouseOver={this.mouseOver} mouseOut={this.mouseOut} onClick={this.onClick}/>
+      <Jumbo name={this.state.name} mouseOver={this.mouseOver} mouseOut={this.mouseOut} onClick={this.onClick} windowWidth={this.state.width}/>
       <div className='section container'>
-        <About />
+        <About windowWidth={this.state.width}/>
         <Skills />
         <Projects />
       </div>

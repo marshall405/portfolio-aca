@@ -25,21 +25,27 @@ html {
 
 /*          HEADING        */
 .logoMS {
-  width: 110px;
+  width: 60px;
+  padding: 15px 10px;
+  border-radius: 50px;
   font-size: 22px;
   text-decoration: #1bd6cf underline;
+  border: 1px solid #1bd6cf;
+}
+.fixed-width {
+  width: 200px;
+  margin: 2px;
+}
+.contact-me{
+  width: 200px;
+  font-size: 22px;
 }
 .social-links {
-  width: 150px;
-  height: 100%;
-  display: flex;
-  justify-content:space-around;
-  align-items: center;
+  position: absolute;
+  top: 140px;
+  right: 0px;
 }
-.contact-me {
-  font-size: 18px;
-  width: 250px;
-}
+
 .flex-container {
   display: flex;
   justify-content: space-between;
@@ -66,22 +72,80 @@ a:active {
   height: 24px;
   width: 28px;
 }
-.social-links a {
-  display: inline-block;
-  text-align: center;
-  
+.nav {
+  border: 1px solid gba(255, 255, 255, 0);
+  border-radius: 10px;
+  padding: 10px;
 }
-.contact-me, .social-links a, .logoMS {
+.nav a {
+  margin: 3px;
+  font-size: 14px;
+  display: inline-block;
+}
+.nav a:hover {
+  border: 1px solid #1bd6cf;
+}
+.nav-burger {
+  margin: 0px 15px;
+  padding: 0px;
+  cursor: pointer;
+}
+.contact-me, .social-links a, .nav a, .small-nav a {
   padding: 5px 10px;
   border: 1px solid rgba(255, 255, 255, 0);
   border-radius: 10px;
   transition: all .2s ease-in-out;
 }
-.contact-me:hover, .social-links a:hover, .logoMS:hover {
-  color: white;
+.social-links a {
+  display: block;
+  text-align: center;
+  padding: 10px 10px;
+  border-radius: 50px;
+}
+.social-links a:hover, .logoMS:hover, .small-nav a:hover{
+  border: 1px solid #1bd6cf;
+}
+.contact-me:hover{
   border: 1px solid #1bd6cf;
   padding: 20px 10px;
+  
 }
+
+.nav-clear {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  
+}
+.nav-clear:hover {
+  transition: all .5s ease-in-out;
+  transform: rotate(180deg);
+}
+.small-nav {
+  
+  border: 1px solid #1bd6cf;
+  position: absolute;
+  width: 250px;
+  left: 50px;
+  margin: 25px;
+  transition: 'all .5s ease-in-out';
+}
+
+.small-nav a {
+  display: block;
+  width: 50%;
+}
+
+
+
+
+
+
+
+
 
 /*        JUMBO            */
 .jumbo {
@@ -101,10 +165,11 @@ a:active {
   text-align: center;
   font-weight: lighter;
   margin: 0;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   cursor: pointer;
 }
 .jumbo > h1 {
+  letter-spacing: 5px;
   font-size: 64px;
   width: 100%;
   text-shadow: 0px 0px 100px #1bd6cf; 
@@ -250,7 +315,22 @@ a:active {
   color: #706f6f;
 }
 
+@media only screen and (max-width: 630px){
+  .fixed-width {
+    width: 150px;
+  }
+  .contact-me {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 530px){
+  .fixed-width {
+    width: 100%;
+    
+  }
 
+}
 @media only screen and (max-width: 450px){
 
 
@@ -303,6 +383,10 @@ a:active {
     font-size: 14px;
   }
  .contact-me {
-   font-size: 14px;
+   font-size: 12px;
+ }
+ .small-nav {
+   margin-left: 0px;
+   left: 10px;
  }
 }

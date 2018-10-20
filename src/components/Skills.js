@@ -26,7 +26,7 @@ const skills = {
 export class Skills extends React.Component {
     render() {
         return (
-            <div className='skills-container'>
+            <div id='skills' className='skills-container'>
                 <h1> Skills </h1>
                 <div className='techSkills'>
                     <h3> Tech Skills </h3>
