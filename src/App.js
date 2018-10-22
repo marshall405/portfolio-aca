@@ -30,7 +30,10 @@ class App extends Component {
   
   componentDidMount() {
     this.updateWindowWidth();
-
+    window.addEventListener('resize', this.updateWindowWidth);
+    window.addEventListener('scroll', function() {
+      console.log('hello');
+    });
   }
   
   updateWindowWidth() {
