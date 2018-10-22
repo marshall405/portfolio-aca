@@ -19,7 +19,7 @@ class App extends Component {
     super(props);
     this.state = {
       name : 'Marshall Slemp',
-      contact : false,
+      showContactInfo : false,
       width: 0,
     }
     this.mouseOver = this.mouseOver.bind(this);
@@ -30,8 +30,9 @@ class App extends Component {
   
   componentDidMount() {
     this.updateWindowWidth();
-    window.addEventListener('resize', this.updateWindowWidth);
+
   }
+  
   updateWindowWidth() {
     this.setState({width: window.innerWidth});
   }
@@ -43,14 +44,14 @@ class App extends Component {
     this.setState({name : 'Marshall Slemp'})
   }
   onClick() {
-    if(this.state.contact){
-      this.setState({contact:false})
+    if(this.state.showContactInfo){
+      this.setState({showContactInfo:false})
     } else {
-      this.setState({contact : true})
+      this.setState({showContactInfo : true})
     }
   }
-  isContact() {
-    if(this.state.contact){
+  showContactInfo() {
+    if(this.state.showContactInfo){
       return (
         <Contact onClick={this.onClick}/>
       )
@@ -60,7 +61,7 @@ class App extends Component {
     return (
       <div id='top'>
       <CssBaseline />
-      {this.isContact()}
+      {this.showContactInfo()}
       <Jumbo name={this.state.name} mouseOver={this.mouseOver} mouseOut={this.mouseOut} onClick={this.onClick} windowWidth={this.state.width}/>
       <div className='section container'>
         <About windowWidth={this.state.width}/>
