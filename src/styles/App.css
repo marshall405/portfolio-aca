@@ -1,6 +1,7 @@
 html {
   font-family: 'Montserrat', sans-serif;
   color: #413f3f;
+  scroll-behavior: smooth;
 }
 
 
