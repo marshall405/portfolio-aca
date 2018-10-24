@@ -148,8 +148,15 @@ a:active {
   padding: 8px 10px;
   border-radius: 50px;
   background-color: #1bd6cf;
+  z-index: 102;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 }
-
+.arrowUpward {
+  height: 44px;
+  width: 44px;
+}
 
 
 
@@ -395,5 +402,9 @@ a:active {
  .small-nav {
    margin-left: 0px;
    left: 10px;
+ }
+ .backToTop {
+   right: 10px;
+   bottom: 10px;
  }
 }
