@@ -121,7 +121,7 @@ a:active {
   border: 1px solid rgba(255, 255, 255, 0);
   
 }
-.nav-clear:hover {
+.spinner:hover {
   transition: all .5s ease-in-out;
   transform: rotate(180deg);
 }
@@ -143,7 +143,12 @@ a:active {
 
 
 
-
+/*   BACK TO TOP */
+.backToTop{
+  padding: 8px 10px;
+  border-radius: 50px;
+  background-color: #1bd6cf;
+}
 
 
 
@@ -152,6 +157,7 @@ a:active {
 .jumbo {
   width: 100%;
   height: 100vh;
+  z-index: 103;
   border-bottom: 10px solid #1bd6cf;
   border-top: 10px solid #1bd6cf;
   margin: 0px 0px;

@@ -7,6 +7,7 @@ import {Projects} from './components/Projects';
 import {Jumbo} from './components/Jumbo';
 import {Skills} from './components/Skills';
 import {Contact} from './components/Contact';
+import {BackToTop} from './components/BackToTop';
 
 // import material-ui
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -18,12 +19,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name : 'Marshall Slemp',
       showContactInfo : false,
       width: 0,
     }
-    this.mouseOver = this.mouseOver.bind(this);
-    this.mouseOut = this.mouseOut.bind(this);
     this.onClick = this.onClick.bind(this);
     this.updateWindowWidth = this.updateWindowWidth.bind(this);
   }
@@ -31,20 +29,11 @@ class App extends Component {
   componentDidMount() {
     this.updateWindowWidth();
     window.addEventListener('resize', this.updateWindowWidth);
-    window.addEventListener('scroll', function() {
-      console.log('hello');
-    });
+    window.addEventListener('scroll', () => console.log(window.screenY));
   }
   
   updateWindowWidth() {
     this.setState({width: window.innerWidth});
-  }
-
-  mouseOver(){
-    this.setState({name : 'Hire Me!'})
-  }
-  mouseOut() {
-    this.setState({name : 'Marshall Slemp'})
   }
   onClick() {
     if(this.state.showContactInfo){
@@ -65,12 +54,13 @@ class App extends Component {
       <div id='top'>
       <CssBaseline />
       {this.showContactInfo()}
-      <Jumbo name={this.state.name} mouseOver={this.mouseOver} mouseOut={this.mouseOut} onClick={this.onClick} windowWidth={this.state.width}/>
+      <Jumbo onClick={this.onClick} windowWidth={this.state.width}/>
       <div className='section container'>
         <About windowWidth={this.state.width}/>
         <Skills />
         <Projects />
       </div>
+      <BackToTop width={this.state.width}/>
       <div className='footer'>
         <h6> designed and developed by marshall 2018</h6>
       </div>

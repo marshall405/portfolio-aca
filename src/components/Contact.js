@@ -1,10 +1,6 @@
 import React from 'react';
+import Clear from '@material-ui/icons/Clear';
 
-
-const XDivStyle = {
-    textAlign: 'right',
-    padding: 10
-}
 export class Contact extends React.Component {
 
 
@@ -15,8 +11,8 @@ export class Contact extends React.Component {
             <div  id='contact' onClick={() => this.props.onClick()}> 
             </div>
             <div className='contact-container'>
-                <div style={XDivStyle}> 
-                    <h2 className='contact-X' onClick={() => this.props.onClick()}>X</h2>
+                <div> 
+                    <Clear className='nav-clear spinner' onClick={this.props.onClick}/>
                 </div>
                 <div className='contact-center'>
                     <h1> Contact Me </h1>

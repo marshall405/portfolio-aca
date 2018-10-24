@@ -1,7 +1,11 @@
 import React from 'react';
 import linkedInLogo from '../images/ln-white.png';
 import GitHubLogo from '../images/gh-white.png';
+
+// NAV BURGER
 import Dehaze from '@material-ui/icons/Dehaze';
+
+// X
 import Clear from '@material-ui/icons/Clear';
 
 
@@ -28,7 +32,7 @@ export class Heading extends React.Component {
                             <a href='#about'> about </a> 
                             <a href='#skills'> skills </a> 
                             <a href='#projects'> projects </a> 
-                            <Clear className='nav-clear' onClick={this.handleClick.bind(this)}/>
+                            <Clear className='nav-clear spinner' onClick={this.handleClick.bind(this)}/>
                         </div>
                     </div>
                 )
