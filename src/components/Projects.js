@@ -31,6 +31,11 @@ const projects = [
         description: 'Created a simple weather app using "openweathermap\'s" API. Again, built using ReactJS',
         href: 'https://marshall405.github.io/another-weather-app/',
        
+    },
+    {
+        title: 'Create a Post',
+        description: 'A simple create a post site, where I used nodeJS, Express and MySQL for the back end and React for the front!',
+        href: 'https://lit-mountain-55987.herokuapp.com/'
     }
 ]
 

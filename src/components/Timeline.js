@@ -109,11 +109,6 @@ export const Timeline = (props) => {
                 <ul style={{width: '70%', margin: '0 auto'}}>
                     <li> Complete Austin Coding Academy <span style={spanStyle}>JavaScript Full Stack (Intermediate)</span> </li>
                 </ul>
-                <h4 style={yearStyle}> 2019 </h4>
-                <h6 style={{width: '80%', margin: '10px auto'}}> January </h6>
-                <ul style={{width: '70%', margin: '0 auto'}}>
-                    <li> Pending... </li>
-                </ul>
             </div>
         </div>
     </div>

@@ -20,6 +20,7 @@ const skills = {
         'NodeJS',
         'Express',
         'MongoDB',
+        'MySQL'
     ]
 }
 
@@ -32,7 +33,7 @@ export class Skills extends React.Component {
                     <h3> Tech Skills </h3>
                     <ul>
                         {
-                            skills.techSkills.map( (skill, index) => <li key={index}> {skill} </li>)
+                            skills.techSkills.map( (skill, index) => <li key={index} style={{display:'block'}}> {skill} </li>)
                         }
                     </ul>
                 </div>
@@ -40,7 +41,7 @@ export class Skills extends React.Component {
                     <h3> Soft Skills </h3>
                     <ul>
                         {
-                            skills.softSkills.map( (skill, index) => <li key={index}> {skill} </li>)
+                            skills.softSkills.map( (skill, index) => <li key={index} style={{display:'block'}}> {skill} </li>)
                         }
                     </ul>
                 </div>
@@ -48,7 +49,7 @@ export class Skills extends React.Component {
                     <h3> In Progess </h3>
                     <ul>
                         {
-                            skills.inProgess.map( (skill, index) => <li key={index}> {skill} </li>)
+                            skills.inProgess.map( (skill, index) => <li key={index} style={{display:'block'}}> {skill} </li>)
                         }
                     </ul>
                 </div>

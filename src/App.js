@@ -20,7 +20,7 @@ class App extends Component {
     super(props);
     this.state = {
       showContactInfo : false,
-      width: 0,
+      width: window.innerWidth,
     }
     this.onClick = this.onClick.bind(this);
     this.updateWindowWidth = this.updateWindowWidth.bind(this);
@@ -29,7 +29,6 @@ class App extends Component {
   componentDidMount() {
     this.updateWindowWidth();
     window.addEventListener('resize', this.updateWindowWidth);
-    window.addEventListener('scroll', () => console.log(window.screenY));
   }
   
   updateWindowWidth() {
