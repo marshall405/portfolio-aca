@@ -175,6 +175,7 @@ a:active {
   background-color: #413f3f;
   color: white;
   position: relative;
+  overflow: hidden;
 }
 .jumbo h1 {
   text-align: center;
