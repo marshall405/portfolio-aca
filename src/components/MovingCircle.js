@@ -24,13 +24,15 @@ export class MovingCircle extends React.Component {
         // create n squares with random width, height, and positioning (top, left)
         // return an array with the squares as objects
         const squaresArray = [];
-        for(let i = 0; i < 6; i++){
+        for(let i = 0; i < 10; i++){
             let square = {
                 width: this.randomNumber(50, window.innerWidth - 50),
                 height: this.randomNumber(50, window.innerHeight- 50),
                 top: this.randomNumber(0, window.innerHeight - 50),
                 left: this.randomNumber(0, window.innerWidth - 50),
-                borderRadius: 10
+                borderWidth: this.randomNumber(1, 3),
+                borderRadius: 10,
+                borderColor: `rgba(${this.randomNumber(0, 255)},${this.randomNumber(0, 255)} , ${this.randomNumber(0, 255)}, .203)`,
             }
             squaresArray.push(square);
         }
@@ -42,7 +44,7 @@ export class MovingCircle extends React.Component {
                 <div className='background-geo'>
                    {this.randomSquares().map( (square, index) => {
                        return (
-                        <div key={index} className='square'style={{top: square.top, left: square.left, borderRadius: square.borderRadius, width: square.width, height:square.height, zIndex: -1}}>
+                        <div key={index} className='square'style={{top: square.top, left: square.left, borderRadius: square.borderRadius, width: square.width, height:square.height, zIndex: -1, borderWidth: square.borderWidth, borderColor: square.borderColor}}>
                         </div>
                        )
                    })}
