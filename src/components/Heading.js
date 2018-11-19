@@ -25,12 +25,6 @@ export class Heading extends React.Component {
             return (
                 <div className='nav-burger' onClick={this.handleClick.bind(this)}>
                     <Dehaze />
-                    <div className='small-nav nav' style={{display: !this.state.clicked ? 'none' : 'block' }}>
-                        <a href='#about'> about </a> 
-                        <a href='#skills'> skills </a> 
-                        <a href='#projects'> projects </a> 
-                        <Clear className='nav-clear spinner' onClick={this.handleClick.bind(this)}/>
-                    </div>
                 </div> 
             )
         }
@@ -46,25 +40,25 @@ export class Heading extends React.Component {
         return (
             <div>
                 <div className='flex-container header'>  
-                    <div className='fixed-width'>
-                        <h1 className='logoMS'><a href='#top'>MS</a></h1>
+                    <div className='fixed-width social-links'>
+                        <a href='https://www.linkedin.com/in/marshall-slemp/'>
+                            <img src={linkedInLogo} alt='linkedIN' />
+                        </a>
+                        <a href='https://github.com/marshall405'>
+                            <img src={GitHubLogo} alt='GitHub' />
+                        </a>
                     </div>
-                  
-                        {this.nav()}
-                   
+                    {this.nav()}
                     <div className='fixed-width'> 
                         <h1 onClick={this.props.onClick} className='contact-me'>Contact Me </h1>
                     </div>
                 </div>
-                <div className='social-links'>
-                    <a href='https://www.linkedin.com/in/marshall-slemp/'>
-                        <img src={linkedInLogo} alt='linkedIN' />
-                    </a>
-                    <a href='https://github.com/marshall405'>
-                        <img src={GitHubLogo} alt='GitHub' />
-                    </a>
+                <div className='small-nav nav' style={{opacity: !this.state.clicked ? '0' : '1', visibility: !this.state.clicked ? 'hidden' : 'visible' }}>
+                        <a href='#about'> about </a> 
+                        <a href='#skills'> skills </a> 
+                        <a href='#projects'> projects </a> 
+                        <Clear className='nav-clear spinner' onClick={this.handleClick.bind(this)}/>
                 </div>
-                
             </div>
             
         )

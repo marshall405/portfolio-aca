@@ -42,9 +42,16 @@ html {
   font-size: 22px;
 }
 .social-links {
-  position: absolute;
-  top: 140px;
-  right: 0px;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+}
+.social-links img {
+  height: 30px;
+  width: 30px;
+}
+.social-links a {
+  display: inline-block;
 }
 
 .flex-container {
@@ -69,10 +76,7 @@ a:active {
     font-weight: inherit;
 }
 
-.social-links img {
-  height: 24px;
-  width: 28px;
-}
+
 .nav {
   border: 1px solid gba(255, 255, 255, 0);
   border-radius: 10px;
@@ -97,12 +101,7 @@ a:active {
   border-radius: 10px;
   transition: all .2s ease-in-out;
 }
-.social-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 10px;
-  border-radius: 50px;
-}
+
 .social-links a:hover, .logoMS:hover, .small-nav a:hover{
   border: 1px solid #1bd6cf;
 }
@@ -114,8 +113,8 @@ a:active {
 
 .nav-clear {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 15px;
+  right: 15px;
   cursor: pointer;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0);
@@ -126,17 +125,19 @@ a:active {
   transform: rotate(180deg);
 }
 .small-nav {
-  
+  width: 100%;
+  top: 75px;
   border: 1px solid #1bd6cf;
   position: absolute;
-  width: 250px;
-  left: 50px;
-  margin: 25px;
-  transition: 'all .5s ease-in-out';
+  transition: opacity .2s;
+  text-align: center;
+  background-color: #413f3f
 }
 
 .small-nav a {
+  text-align: center;
   display: block;
+  margin: 20px auto;
   width: 50%;
 }
 
@@ -417,23 +418,8 @@ a:active {
 }
 
 @media only screen and (max-width: 375px) {
-  .logoMS {
-    display: none;
-  }
-  .social-links {
-    position: static;
-    margin: 25px;
-  }
-  .social-links a {
-    display: inline;
-    margin: 0px;
-  }
-  .jumbo {
-    display: block;
-  }
   .jumbo > h1 {
-    padding-top: 40vh; 
-    font-size: 22px;
+    font-size: 32px;
     text-shadow: 0 10px 200px #1bd6cf;
   }
 
