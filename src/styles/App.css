@@ -282,6 +282,7 @@ a:active {
 
   /*   PROFILE PICTURE    */
 
+/*   USE FOR CABO PIC
   .profile-pic {
     display: block;
     width: 40%;
@@ -293,6 +294,14 @@ a:active {
   }
 .profile-pic:hover {
   width: 60%;
+} */
+
+.profile-pic {
+  display: block;
+  width: 150px;
+  margin: 20px auto;
+ 
+
 }
 /*        SKILLS           */
 .skills-container ul {
