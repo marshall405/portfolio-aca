@@ -36,6 +36,11 @@ const projects = [
         title: 'Create a Post',
         description: 'A simple create a post site, where I used nodeJS, Express and MySQL for the back end and React for the front!',
         href: 'https://lit-mountain-55987.herokuapp.com/'
+    },
+    {
+        title: 'Memory Game',
+        description: 'A memory game using Vanilla JS.',
+        href: 'https://marshall405.github.io/memory_game/'
     }
 ]
 
