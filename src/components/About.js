@@ -31,7 +31,7 @@ export class About extends React.Component {
                         <p style={greetingStyle}> Hello, my name is Marshall and I am a self-taught web developer!</p>
                         <p style={greetingStyle}> </p>
                         <p style={greetingStyle}> My most recent project is a Full-Stack application where you can 'post a comment'. I used HTML, CSS and ReactJS for the front end. NodeJS, Express and MySQL for the backend. At the end of every night all messages get deleted. </p>
-                        <p style={greetingStyle}> Checkout some of my projects furthur down the page. Or click <a href="#projects" style={{borderBottom: '1px solid black'}}>here!</a></p>
+                        <p style={greetingStyle}> Checkout some of my projects further down the page. Or click <a href="#projects" style={{borderBottom: '1px solid black'}}>here!</a></p>
                         <div style={divAStyle}><a href={Resume} style={aStyle}> View Resume </a></div>
                         {/* <Timeline windowWidth={this.props.windowWidth}/> */}
                     </div>
