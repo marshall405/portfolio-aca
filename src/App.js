@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 
 // import my components
-
+import {Heading} from './components/Heading';
 import {About} from './components/About';
 import {Projects} from './components/Projects';
 import {Jumbo} from './components/Jumbo';
 import {Skills} from './components/Skills';
-import {Contact} from './components/Contact';
-import {BackToTop} from './components/BackToTop';
 
-// import material-ui
-import CssBaseline from '@material-ui/core/CssBaseline';
+
 
 // import styles
 import './styles/App.css';
@@ -19,49 +16,35 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showContactInfo : false,
       width: window.innerWidth,
+      content: 'Projects'
     }
-    this.onClick = this.onClick.bind(this);
-    this.updateWindowWidth = this.updateWindowWidth.bind(this);
+    this.renderContent = this.renderContent.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick(content) {
+    this.setState({content: content});
+  }
+  renderContent() {
+    switch(this.state.content) {
+      case 'About Me':
+        return <About handleClick={this.handleClick}/>
+      case 'Skills':
+        return <Skills />
+      case 'Projects':
+        return <Projects />
+      default:
+        return <Jumbo />
+    }
   }
   
-  componentDidMount() {
-    this.updateWindowWidth();
-    window.addEventListener('resize', this.updateWindowWidth);
-  }
-  
-  updateWindowWidth() {
-    this.setState({width: window.innerWidth});
-  }
-  onClick() {
-    if(this.state.showContactInfo){
-      this.setState({showContactInfo:false})
-    } else {
-      this.setState({showContactInfo : true})
-    }
-  }
-  showContactInfo() {
-    if(this.state.showContactInfo){
-      return (
-        <Contact onClick={this.onClick}/>
-      )
-    }
-  }
   render() {
     return (
       <div id='top'>
-      <CssBaseline />
-      {this.showContactInfo()}
-      <Jumbo onClick={this.onClick} windowWidth={this.state.width}/>
-      <div className='section container'>
-        <About windowWidth={this.state.width}/>
-        <Skills />
-        <Projects />
-      </div>
-      <BackToTop width={this.state.width}/>
+      <Heading handleClick={this.handleClick}/>
+      {this.renderContent()}
       <div className='footer'>
-        <h6> designed and developed by marshall 2018</h6>
+        <h6> Made by Marshall Slemp 2019</h6>
       </div>
     </div>
     )

@@ -1,39 +1,36 @@
 import React from 'react';
-// import CaboPic from '../images/cabo.jpg';
-import CartoonPic from '../images/cartoonPic.png';
 import Resume from '../assets/resume.pdf';
-// import { Timeline } from '../components/Timeline';
+import Cabo from '../images/cabo.jpg';
+import {Timeline} from './Timeline';
 
-const greetingStyle = {
-    transition: 'fontSize 2s',
-    fontSize: 15,
-    textAlign:'center', 
-    marginTop: 30, 
-    marginBottom: 10
-
-}
-const aStyle = {
-    textDecoration: 'underline'
-}
-const divAStyle = {
-    padding: 15,
-    textAlign: 'center'
-}
 export class About extends React.Component {
+
+    componentDidMount() {
+        let nav = document.getElementsByTagName('nav');
+        let navHeight = nav[0].offsetHeight;
+        let section = document.getElementById('section');
+        section.style.display = 'relative';
+        section.style.top = navHeight + 10 +'px';
+    }
     render() {
+        let that = this;
         return (
-            <div id='about' className='about-container'>
-               <h1> About Me </h1>
-               <div className='inner-about-container'>
-                    {/* <img className='profile-pic' src={CaboPic} alt='cabo :)'/> */}
-                    <img className='profile-pic' src={CartoonPic} alt='animated profile'/>
-                    <div>
-                        <p style={greetingStyle}> Hello, my name is Marshall and I am a self-taught web developer!</p>
-                        <p style={greetingStyle}> </p>
-                        <p style={greetingStyle}> My most recent project is a Full-Stack application where you can 'post a comment'. I used HTML, CSS and ReactJS for the front end. NodeJS, Express and MySQL for the backend. At the end of every night all messages get deleted. </p>
-                        <p style={greetingStyle}> Checkout some of my projects further down the page. Or click <a href="#projects" style={{borderBottom: '1px solid black'}}>here!</a></p>
-                        <div style={divAStyle}><a href={Resume} style={aStyle}> View Resume </a></div>
-                        {/* <Timeline windowWidth={this.props.windowWidth}/> */}
+            <div id='section' className='section container'>
+                <div id='about' className='about-container'>
+                    <h1> About Me </h1>
+                    <div className='about-header'>
+                        <img src={Cabo} alt='Me in Cabo San Lucas'></img>
+                    </div>
+                    <div className='inner-about-container'>
+                        <div>
+                            <p> Hi! My name is Marshall and I am a self-taught web developer!</p>
+                            <p> </p>
+                            <p>  </p>
+                            <p> </p>
+                            <p> Checkout some of my projects <a onClick={function() {that.props.handleClick('Projects')}} style={{borderBottom: '1px solid black'}}>here!</a></p>
+                            <div className='resume'><a href={Resume} ><i className="fas fa-file fa-2x"></i> View Resume </a></div>
+                            <Timeline />
+                        </div>
                     </div>
                 </div>
             </div>

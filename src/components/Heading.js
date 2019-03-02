@@ -1,66 +1,25 @@
 import React from 'react';
-import linkedInLogo from '../images/ln-white.png';
-import GitHubLogo from '../images/gh-white.png';
-
-// NAV BURGER
-import Dehaze from '@material-ui/icons/Dehaze';
-
-// X
-import Clear from '@material-ui/icons/Clear';
+import '../styles/heading.css';
 
 
-
-
-
-export class Heading extends React.Component {
-    state = {
-        clicked: false,
-    };
-    handleClick(e) {
-        const isClicked = this.state.clicked ? false : true;
-        this.setState({clicked: isClicked});
-    }
-    nav() {
-        if(this.props.windowWidth <= 530){
-            return (
-                <div className='nav-burger' onClick={this.handleClick.bind(this)}>
-                    <Dehaze />
-                </div> 
-            )
-        }
-        return (
-            <div className='nav'>
-                <a href='#about'> about </a> 
-                <a href='#skills'> skills </a> 
-                <a href='#projects'> projects </a> 
+export function Heading(props) {
+    return (
+        <nav className='nav'>
+            <div className='nav-container'>
+                <div className='brand'>
+                    <a onClick={function() {props.handleClick('home')}} className='nav-icon'><i className="fas fa-user-astronaut fa-5x brand-icon"></i><span>Marshall Slemp</span></a>
+                </div>
+                <div className='links'>
+                    <a onClick={function() {props.handleClick('About Me')}} className='nav-icon'> About Me </a> 
+                    <a onClick={function() {props.handleClick('Skills')}} className='nav-icon'> Skills </a> 
+                    <a onClick={function() {props.handleClick('Projects')}} className='nav-icon'> Projects </a> 
+                </div>
+                <div className='extra'>
+                    <a href='https://www.linkedin.com/in/marshall-slemp/' target='_blank' rel="noopener noreferrer" className='nav-icon'><i className="fab fa-linkedin fa-lg"></i></a>
+                    <a href='https://github.com/marshall405' target='_blank' rel="noopener noreferrer" className='nav-icon'><i className="fab fa-github fa-lg"></i></a>
+                    <a href='https://ko-fi.com/marshallslemp' target='_blank' rel="noopener noreferrer" className='nav-icon'><i className="fas fa-coffee"></i></a>
+                </div>
             </div> 
-        )
-    }
-    render() {
-        return (
-            <div>
-                <div className='flex-container header'>  
-                    <div className='fixed-width social-links'>
-                        <a href='https://www.linkedin.com/in/marshall-slemp/'>
-                            <img src={linkedInLogo} alt='linkedIN' />
-                        </a>
-                        <a href='https://github.com/marshall405'>
-                            <img src={GitHubLogo} alt='GitHub' />
-                        </a>
-                    </div>
-                    {this.nav()}
-                    <div className='fixed-width'> 
-                        <h1 onClick={this.props.onClick} className='contact-me'>Contact Me </h1>
-                    </div>
-                </div>
-                <div className='small-nav nav' style={{opacity: !this.state.clicked ? '0' : '1', visibility: !this.state.clicked ? 'hidden' : 'visible' }}>
-                        <a href='#about'> about </a> 
-                        <a href='#skills'> skills </a> 
-                        <a href='#projects'> projects </a> 
-                        <Clear className='nav-clear spinner' onClick={this.handleClick.bind(this)}/>
-                </div>
-            </div>
-            
-        )
-    }
+        </nav>    
+    )
 }
