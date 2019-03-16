@@ -10,8 +10,18 @@ export class About extends React.Component {
         let navHeight = nav[0].offsetHeight;
         let section = document.getElementById('section');
         section.style.marginTop = `${navHeight + 10}px`;
-        
+
+        const cabo = document.getElementById('cabo-pic');
+        cabo.addEventListener('click', () => {
+            let classArr = cabo.className.split(" ");
+            if(classArr.indexOf('flip') > -1){
+                cabo.classList.remove('flip');
+            }else {
+                cabo.classList.add('flip');
+            }
+        });
     }
+
     render() {
         let that = this;
         return (
@@ -19,7 +29,7 @@ export class About extends React.Component {
                 <div id='about' className='about-container'>
                     <h1> About Me </h1>
                     <div className='about-header'>
-                        <img src={Cabo} alt='Me in Cabo San Lucas'></img>
+                        <img src={Cabo} alt='Me in Cabo San Lucas' id='cabo-pic'></img>
                     </div>
                     <div className='inner-about-container'>
                         <div>

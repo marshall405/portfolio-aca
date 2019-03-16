@@ -93,7 +93,13 @@ a {
 .about-header {
   text-align: center;
 }
-
+.about-container img {
+  transition: transform 2s;
+}
+.flip {
+  transition: transform 2s;
+  transform: rotateY(180deg);
+}
   /*   PROFILE PICTURE    */
 .profile-pic {
   display: block;
@@ -140,7 +146,9 @@ a {
 .skills-container >h3{
   margin: 20px 0px;
 }
-
+b {
+  text-decoration: underline;
+}
 /*        PROJECTS          */
 .projects {
   display: flex;
