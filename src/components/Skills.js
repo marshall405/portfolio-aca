@@ -1,84 +1,86 @@
 import React from 'react';
 
  
-const skills = {
-    techSkills: [
-        'JavaScript',
-        'CSS',
-        'HTML',
-        'ReactJS',
-        'Git',
-        'GitHub'
-    ],
-    softSkills: [
-        'Strong work ethic',
-        'Leadership',
-        'Team player',
-        'Attentive'
-    ],
-    inProgess: [
-        'NodeJS',
-        'Express',
-        'MongoDB',
-        'MySQL'
-    ]
-}
+const skills = [
+    {
+        name: 'HTML',
+        progress: 80
+    },
+    {
+        name: 'CSS',
+        progress: 75
+    },
+    {
+        name: 'JavaScript',
+        progress: 80
+    },
+    {
+        name: 'Git',
+        progress: 60
+    },
+    {
+        name: 'ReactJS',
+        progress: 55
+    },
+    {
+        name: 'Command Line',
+        progress: 60
+    },
+    {
+        name: 'Node JS',
+        progress: 40
+    },
+    {
+        name: 'MySQL',
+        progress: 50
+    },
+    {
+        name: 'Express',
+        progress: 40
+    }
+];
 
 export class Skills extends React.Component {
+    
     componentDidMount() {
+        // moves skills section down - header is fixed
         let nav = document.getElementsByTagName('nav');
         let navHeight = nav[0].offsetHeight;
         let section = document.getElementById('section');
-        section.style.display = 'relative';
-        section.style.top = navHeight + 10 +'px';
+        section.style.marginTop = `${navHeight + 10}px`;
     }
+
+    renderSkill(skill) {
+        return (
+            <li>
+                <h2> {skill.name} </h2>
+                <div><h3 style={{width: `${skill.progress}%`}}> </h3></div>
+            </li>
+        )
+    }
+
     render() {
         return (
             <div id='section' className='section container'>
-                <div id='skills' className='skills-container'>
+                <div className='skills-container'>
                     <h1> Skills </h1>
-                    <div className='techSkills'>
-                        <h3> Tech Skills </h3>
-                        <ul>
-                            {
-                                skills.techSkills.map( (skill, index) => <li key={index} style={{display:'block'}}> {skill} </li>)
-                            }
-                        </ul>
+                    <div className='skills'>
+                    { 
+                        skills.map( skill => {
+                            return this.renderSkill(skill);
+                        })
+                    }
                     </div>
-                    <div className='softSkills'>
-                        <h3> Soft Skills </h3>
-                        <ul>
-                            {
-                                skills.softSkills.map( (skill, index) => <li key={index} style={{display:'block'}}> {skill} </li>)
-                            }
-                        </ul>
-                    </div>
-                    <div className='inProgess'>
-                        <h3> In Progess </h3>
-                        <ul>
-                            {
-                                skills.inProgess.map( (skill, index) => <li key={index} style={{display:'block'}}> {skill} </li>)
-                            }
-                        </ul>
-                    </div>
-                    <div style={{
-                        margin: '100px 0px 0px 0px', 
-                        width: '100%', 
-                        backgroundColor: '#413f3f', 
-                        color:'white', 
-                        borderRadius: 10}}>
-                        <h6 style={{
-                            width: '50%',
-                            margin: '0 auto',
-                            textAlign:'center', 
-                            padding: 20, 
-                            fontSize: 12
-                            }}> All skills require practice and consistency. <br />
-                            I strive to learn everyday, improve my current skills and gain new skills.<br /> 
-                        </h6>
-                    </div>
+                
+                    <h3> Other skills in progress... </h3>
+                    <ul className='more-skills'>
+                        
+                        <li> Bash Scripts - I recently created a script to automate uploading files to cPanel using SFTP. I also automated the process of having to create the basic html, css and js files when starting a new project and preloads the html file with the basic structure.</li>
+                        <li> more coming :)</li>
+                    </ul>
                 </div>
             </div>
         )
     }
 }
+

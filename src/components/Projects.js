@@ -60,8 +60,7 @@ export class Projects extends React.Component {
         let nav = document.getElementsByTagName('nav');
         let navHeight = nav[0].offsetHeight;
         let section = document.getElementById('section');
-        section.style.display = 'relative';
-        section.style.top = navHeight + 10 +'px';
+        section.style.marginTop = `${navHeight + 10}px`;
     }
     viewMore(e, index) {
         let parent = e.currentTarget.parentNode.parentNode.children;
@@ -73,7 +72,7 @@ export class Projects extends React.Component {
         projectNodes.forEach( (child, index) => {
             let shortDescription = projects[index].description.slice(0, 120);
             if(shortDescription.length >= 80){
-                shortDescription = shortDescription + '...';
+                shortDescription = shortDescription + '... view more';
             }
             child.children[0].children[1].children[1].innerHTML = shortDescription;
         });
@@ -89,7 +88,7 @@ export class Projects extends React.Component {
                                 let descMax = project.description.slice(0,120);
                                 // add '...' if the description reaches 80 chars or more
                                 if(descMax.length >= 80){
-                                    descMax = descMax + '...';
+                                    descMax = descMax + '... view more';
                                 }
                                 return (
                                     <List key={index}>

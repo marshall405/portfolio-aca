@@ -49,6 +49,7 @@ export class Jumbo extends Component {
                         Hello!
                     </h1>
                  </div>
+                 
              </div>
         )
     }

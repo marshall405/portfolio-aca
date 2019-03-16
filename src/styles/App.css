@@ -11,9 +11,11 @@ html {
   max-width: 700px;
   margin: 0 auto;
 }
- ul, li, h4, h5, h6 {
+ ul, li, h3, h4, h5, h6 {
    margin: 0;
    padding: 0;
+   text-decoration: none;
+   list-style: none;
  }
  ul {
    list-style: none;
@@ -54,7 +56,7 @@ a {
 .section {
   /* border: 1px solid #413f3f; */
   box-shadow: 0px 0px 1px 3px #413f3f31;
-  margin: 10px 0;
+  
   padding: 10px;
   border-radius: 10px;
   min-height: 100vh;
@@ -62,63 +64,6 @@ a {
 .section > div > h1 {
   text-decoration: underline rgb(25, 75, 141);
 }
-
-
-
-
-
-/*        CONTACT          */
-.contact-modal {
-  display: flex;
-  justify-content: center;
- 
-  
-  
-}
-#contact {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  opacity: .9;
-  background-color: #413f3f;
-}
-
-.contact-container {
-  position: fixed;
-  max-width: 500px;
-  z-index: 1001;
-  background-color: white;
-  border-radius: 10px;
-  margin-top: 80px;
-  opacity: 1;
-  color:#413f3f;
-  
-}
-.contact-center {
-  text-align: center;
-  padding: 50px;
-}
-.contact-container h1 {
-  text-decoration: #1bd6cf underline;
-  margin: 2px;
-}
-
-.contact-X {
-    cursor: pointer;
-    display: inline;
-    border-radius: 10px;
-    padding: 5px 10px;
-  
-}
-.contact-X:hover {
-  background-color: #413f3f;
-  color: white;
-}
-
-
-
-
 
 /*        ABOUT            */
 #about {
@@ -158,19 +103,43 @@ a {
 
 }
 /*        SKILLS           */
-.skills-container ul {
-  list-style: none;
-  margin: 10px auto;
-}
-.skills-container ul li {
-  display: inline;
-  margin: 10px;
-}
-.skills-container div {
-  width: 80%;
-  margin: 0 auto;
-}
 
+.skills {
+  margin: 10px 0px;
+}
+.skills li div {
+  margin: 0;
+  padding: 0;
+  border-radius: 10px; 
+  background: #706f6f;
+}
+.skills li h2 {
+  font-size: 16px; 
+  margin: 15px 0px 0px 0px;
+  padding: 0px;
+}
+.skills h3 {
+  margin: 0;
+  padding: 0;
+  height: 10px;
+  background: rgb(25, 75, 141);
+  border-radius: 10px; 
+  animation: skillLoader 2s;
+}
+@keyframes skillLoader{
+  from {width: 0}
+  to {width: 100}
+}
+.more-skills {
+  margin: 20px;
+}
+.more-skills li {
+  width: 80%;
+  list-style: circle;
+}
+.skills-container >h3{
+  margin: 20px 0px;
+}
 
 /*        PROJECTS          */
 .projects {
@@ -190,6 +159,7 @@ a {
 /*        FOOTER           */
 
 .footer {
+  margin: 20px 0px;
   position: relative;
   width: 100%;
   padding: 0;

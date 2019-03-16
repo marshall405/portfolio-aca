@@ -9,8 +9,8 @@ export class About extends React.Component {
         let nav = document.getElementsByTagName('nav');
         let navHeight = nav[0].offsetHeight;
         let section = document.getElementById('section');
-        section.style.display = 'relative';
-        section.style.top = navHeight + 10 +'px';
+        section.style.marginTop = `${navHeight + 10}px`;
+        
     }
     render() {
         let that = this;
@@ -24,9 +24,9 @@ export class About extends React.Component {
                     <div className='inner-about-container'>
                         <div>
                             <p> Hi! My name is Marshall and I am a self-taught web developer!</p>
-                            <p> </p>
-                            <p>  </p>
-                            <p> </p>
+                            <p> I'm extremely shy at first but I get along great with everyone I meet!</p>
+                            <p> I enjoy DIY projects from fixing the front end of a truck after hitting a deer to remodeling a friends bathroom in only 3 days.  </p>
+                            <p> Most recently I've been working on becoming better at JavaScript and building my own applications.</p>
                             <p> Checkout some of my projects <a onClick={function() {that.props.handleClick('Projects')}} style={{borderBottom: '1px solid black'}}>here!</a></p>
                             <div className='resume'><a href={Resume} ><i className="fas fa-file fa-2x"></i> View Resume </a></div>
                             <Timeline />

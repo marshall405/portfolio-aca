@@ -17,7 +17,7 @@ class App extends Component {
     super(props);
     this.state = {
       width: window.innerWidth,
-      content: 'Projects'
+      content: 'Skills'
     }
     this.renderContent = this.renderContent.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -41,8 +41,10 @@ class App extends Component {
   render() {
     return (
       <div id='top'>
-      <Heading handleClick={this.handleClick}/>
-      {this.renderContent()}
+      <Heading handleClick={this.handleClick} page={this.state.content}/>
+      <div>
+        {this.renderContent()}
+      </div>
       <div className='footer'>
         <h6> Made by Marshall Slemp 2019</h6>
       </div>

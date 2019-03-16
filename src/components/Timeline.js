@@ -6,7 +6,7 @@ export const Timeline = (props) => {
     const lifeEvents = [
         {
             year: 2006,
-            event: 'I graduate highschool and head off to college, leaving the farm life behind! I had no idea what I wanted to do in life but I ended up in Business school for the nexy 4 years!',
+            event: 'I graduate highschool and head off to college, leaving the farm life behind! I had no idea what I wanted to do in life but I ended up in Business school for the next 4 years!',
             icon: "fas fa-bus"
         },
         {
@@ -21,7 +21,7 @@ export const Timeline = (props) => {
         },
         {
             year: 2017,
-            event: 'I get my first taste of programming when I decide to write a macro in Excel to automate the Date and the days of the weeks for a timesheet. I would spend my lunch breaks working on this excel sheet and would have to wait for the next pay period to see if it would work the way I planned! After weeks and weeks of struggling I finally prevailed and I have been hooked ever since. I ended up looking into web development and started learning JavaScript. I also start using the Command Line - even though it was \'cd this and cd that\' I really felt like I was somebody!',
+            event: 'I get my first taste of programming when I decide to write a macro in Excel to automate the Date and the days of the weeks for a timesheet. I would spend my lunch breaks working on this excel sheet and would have to wait for the next pay period to see if it would work the way I planned! After weeks and weeks of struggling I finally prevailed and I have been hooked ever since!',
             icon: "fas fa-laptop-code"
         },
         {
