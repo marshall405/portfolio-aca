@@ -1,0 +1,60 @@
+.jumbo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    height: 100vh;
+    margin: 0px;
+    color: white;
+    position: relative;
+}
+
+.jumbo > *{ 
+    animation: setBackground 10s linear infinite;
+    animation-delay: 1000ms;
+    transform: rotate(355deg);
+}
+.jumbo a {
+    padding: 20px 0px;
+    color: white;
+}
+.jumbo h1 {
+    letter-spacing: 8px;
+    font-size: 16px;
+    font-size: 7vw;
+    animation: setUnderline 10s linear infinite;
+    animation-delay: 1000ms;
+    
+}
+
+.jumbo ul {
+    margin-top: 40px;
+}
+.jumbo li:hover {
+    border-bottom: 2px solid rgb(205, 227, 37);
+}
+.jumbo ul li{
+    padding: 20px 0px;
+    margin: 40px;
+    display: inline;
+    font-size: 3vw;
+}
+@keyframes setBackground {
+    from {
+        text-shadow: 0px 0px 3px #194b8d;
+    }
+    to {
+        text-shadow: 0px 0px 3px #194b8d;
+    }
+}
+@keyframes setUnderline {
+    from {
+        border-bottom: 2px solid rgb(205, 227, 37);
+    }
+    to {
+        border-bottom: 2px solid rgb(205, 227, 37);
+    }
+}
+
