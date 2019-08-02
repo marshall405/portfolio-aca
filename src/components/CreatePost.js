@@ -87,7 +87,7 @@ export class CreatePost extends React.Component {
                         <textarea
                             rows='13'
                             cols='50'
-                            placeholder='type new message'
+                            placeholder='message'
                             maxLength='1500'
                             onChange={this.handleOnChange}
                             value={this.state.post}
