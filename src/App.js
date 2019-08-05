@@ -8,20 +8,23 @@ import { Projects } from './components/Projects';
 import { Canvas } from './components/Canvas';
 import { Jumbo } from './components/Jumbo';
 
-
+import SafariSmoothScroll from './scripts/SafariSmoothScroll';
 
 
 // import styles
 import './styles/App.css';
 
 class App extends Component {
-
+  componentDidMount() {
+    SafariSmoothScroll();
+  }
   render() {
     return (
       <div className='container'>
         <Canvas />
         <Heading />
         <Jumbo />
+
         <div className='content-container'>
           <About />
           <Contact />

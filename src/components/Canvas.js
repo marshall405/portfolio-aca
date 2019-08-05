@@ -16,7 +16,6 @@ export class Canvas extends React.Component {
     componentDidMount() {
         this.renderCanvas();
     }
-
     renderCanvas() {
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
