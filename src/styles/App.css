@@ -2,7 +2,7 @@ html {
   font-family: 'Montserrat', sans-serif;
   color: #413f3f;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: auto;
+  /* -webkit-overflow-scrolling: touch; */
   letter-spacing: 1px;
 
 }
