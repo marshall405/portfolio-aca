@@ -4,25 +4,22 @@
     z-index: 1;
     width: 100%;
     font-size: .85rem;
-    color: white;
   }
   
   
   .nav a {
-    /* color: rgb(25, 75, 141); */
-    padding: .5rem .6rem;
+    padding: 15px;
     display: block;
-    margin: 5px .1rem;
+    margin: 5px;
   }
   
   
-  .nav .nav-container {
+  .nav-container {
     display: flex;
     align-items: center
   }
   
-  .nav .nav-container {
-    
+  .nav-container {
     margin: auto;
     padding: 0 15px;
     -ms-flex-wrap: wrap;
@@ -31,45 +28,45 @@
     justify-content: space-between;
   }
   
-  .nav .nav-container .brand {
-    border-bottom: 2px solid rgba(205, 227, 37,0);
-    font-weight: 600
+  .nav-container .brand {
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: rgba(25, 75, 141, 1);
   }
-  
-  .nav .nav-container .brand a {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 0;
+  .nav-container .brand, .nav-container .social {
+    box-shadow: 1px 1px 1px 0px rgb(205, 227, 37);
+  }
+  .nav-container .brand a {
+    padding: 10px;
     font-size: .95rem;
-    padding: 20px 0px;
-    color: white;
-  }
-  .extra a {
-    color: rgb(25, 75, 141);
-    border-bottom: 2px solid rgba(205, 227, 37,0);
-  }
-  .nav .nav-container .brand a:hover, .nav .nav-container .extra a:hover {
     color: rgb(205, 227, 37);
-    background: 0 0!important;
+  }
+  .nav-container .social {
+    background-color: rgb(25, 75, 141);
+    border-radius: 5px;
+  }
+  .brand a, .social a {
+    color: rgb(205, 227, 37);
+    border-bottom: 2px solid rgba(205, 227, 37,0);
+    opacity: .9;
+  }
+  .nav-container .brand a:hover, .nav-container .social a:hover {
     border-bottom: 2px solid rgb(205, 227, 37);
   }
-  .nav .nav-container .brand span {
-    margin-left: .5rem
-  }
-  
-  .nav .nav-container .extra {
+ 
+  .nav-container .social {
     font-size: 1rem;
     display: -ms-flexbox;
     display: flex;
     margin: 10px 0;
+    padding: 5px;
   }
-  .nav .nav-container .extra a {
+  .nav-container .social a {
     margin: 0;
+    padding: 10px;
   }
  
-  .nav .nav-container .links {
+  .nav-container .links {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
@@ -79,7 +76,7 @@
     justify-content: center
   }
   
-  .nav .nav-container .links a {
+  .nav-container .links a {
     font-size: 1rem;
     margin-right: .8rem
   }
@@ -87,27 +84,27 @@
   
 
   @media(min-width: 700px) {
-    .nav a.nav-icon {
+    a.nav-icon {
         padding:.8rem .6rem
     }
   
-    .nav .nav-container .links {
+    .nav-container .links {
         -ms-flex-pack: start;
         justify-content: flex-start;
         margin: .5rem 0;
     }
   
-    .nav .nav-container .links a {
+    .nav-container .links a {
         font-size: 1.1rem;
     }
   
   
-    .nav .nav-container .brand a {
+    .nav-container .brand a {
         margin-top: .5rem;
         font-size: 1.1rem
     }
   
-    .nav .nav-container .extra a {
+    .nav-container .social a {
         font-size: 1.1rem
     }
 
@@ -119,36 +116,38 @@
         height: 80px;
     }
   
-    .nav .nav-container .brand {
+    .nav-container .brand {
         margin-right: .5rem
     }
-  
-    .nav .nav-container .brand a {
+    .nav-container .social {
+      margin-top: 15px;
+    }
+    .nav-container .brand a, .nav-container .social a {
         margin-top: 5px;
         font-size: 1.9rem;
     }
   
-    .nav a {
+    a {
         padding: .8rem 1rem
     }
   
-    .nav a.nav-icon {
+    a.nav-icon {
         padding: .8rem
     }
   
   
-    .nav .nav-container {
+    .nav-container {
         height: 70px
     }
   
-    .nav .nav-container .links {
+    .nav-container .links {
         width: auto;
         -ms-flex-order: 0;
         order: 0;
         margin: 0
     }
   
-    .nav .nav-container .extra {
+    .nav-container .social {
         font-size: 2.1rem;
     }
   }

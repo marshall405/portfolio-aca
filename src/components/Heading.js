@@ -9,7 +9,7 @@ export function Heading(props) {
                 <div className='brand'>
                     <a href="#top" className='nav-icon'><span>M S</span></a>
                 </div>
-                <div className='extra'>
+                <div className='social'>
                     <a href='https://www.linkedin.com/in/marshall-slemp/' target='_blank' rel="noopener noreferrer" className='nav-icon'><i className="fab fa-linkedin fa-lg"></i></a>
                     <a href='https://github.com/marshall405' target='_blank' rel="noopener noreferrer" className='nav-icon'><i className="fab fa-github fa-lg"></i></a>
                 </div>

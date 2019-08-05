@@ -30,6 +30,7 @@
 }
 
 .jumbo ul {
+    display: flex;
     margin-top: 40px;
 }
 .jumbo li:hover {
@@ -40,6 +41,7 @@
     margin: 40px;
     display: inline;
     font-size: 3vw;
+    border-bottom: 2px solid rgba(205, 227, 37, 0);
 }
 @keyframes setBackground {
     from {
