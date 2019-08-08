@@ -27,14 +27,14 @@ export class Canvas extends React.Component {
 
 
         const width = 150; //150
-        const height = 150; //150
+        const height = window.screen.height; //150
 
         let x = 0;
         let y = 0;
-        let dx = 150;//150
-        let dy = 10; //10
+        let dx = 40;//150
+        let dy = 0; //10
 
-        let startDY = false;
+
         let drawRAF; // used as requestAnimationFrame ID
 
         function draw() {
@@ -42,20 +42,17 @@ export class Canvas extends React.Component {
             ctx.fillRect(x, y, width, height);
             if (x + width > canvas.width || x < 0) {
                 dx = -dx;
-                startDY = true;
             }
 
             // increment fillRect 
             x += dx;
-            if (startDY) {
-                y += dy;
-            }
+
 
 
             // increment color scheme
-            r += 3;
-            g += 2;
-            b -= 3;
+            r += 4;
+            g += 3;
+            b -= 4;
 
             drawRAF = requestAnimationFrame(draw);
         }
@@ -63,6 +60,7 @@ export class Canvas extends React.Component {
 
         setTimeout(() => {
             console.log('stop draw animation');
+
             cancelAnimationFrame(drawRAF);
         }, 5000); //stop draw animation after 5 seconds
 

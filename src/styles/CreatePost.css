@@ -4,6 +4,7 @@
  }
 
 .create-post-container {
+    position: relative;
     width: 90%;
     margin: 10px auto;
     color: #413f3f;
@@ -43,7 +44,7 @@
 .create-post-container input:focus,
 .create-post-container button:hover {
    outline: none;
-   border: 2px solid rgb(205, 227, 37);
+   border: 2px solid rgb(255, 255,0);
 }
 .create-post-container p {
     text-align: right;
@@ -61,4 +62,23 @@
 }
 .flex-container input {
     margin-bottom: 10px;
+}
+
+
+
+/* Message Sent  */
+
+#messageSent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(25, 75, 141, 1);;
+    color: rgb(255, 255,0);
+    font-size: 32px;
+    border-radius: 10px;
+    margin: 0px auto;
 }

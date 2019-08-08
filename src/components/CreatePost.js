@@ -14,6 +14,7 @@ export class CreatePost extends React.Component {
             isNameEmpty: false,
             isTitleEmpty: false,
             isTextEmpty: false,
+            messageSent: false,
         }
         this.handleOnChange = this.handleOnChange.bind(this);
         this.handleNameChange = this.handleNameChange.bind(this);
@@ -71,7 +72,8 @@ export class CreatePost extends React.Component {
                 post: '',
                 name: '',
                 title: '',
-                post_length: 0
+                post_length: 0,
+                messageSent: true,
             })
         } else if (newPost) {
             this.setState({ isNameEmpty: true });
@@ -79,9 +81,27 @@ export class CreatePost extends React.Component {
             this.setState({ isTextEmpty: true });
         }
     }
+    messageSent() {
+        setTimeout(() => {
+            this.setState({
+                messageSent: false,
+            });
+        }, 15000);
+        if (this.state.messageSent) {
+            return (
+                <div id='messageSent'>
+                    Success!
+                </div>
+            )
+        } else {
+            return;
+        }
+
+    }
     render() {
         return (
             <div className='create-post-container'>
+                {this.messageSent()}
                 <div className='post-form'>
                     <form onSubmit={this.handleSubmit}>
                         <textarea
@@ -96,8 +116,8 @@ export class CreatePost extends React.Component {
                         <p> {1500 - this.state.post_length} characters remaining</p>
                         <div className='flex-container'>
                             <input
-                                type='text'
-                                placeholder='subject'
+                                type='email'
+                                placeholder='email'
                                 value={this.state.title}
                                 className={this.state.isTitleEmpty ? 'alert' : ''}
                                 onChange={this.handleTitleChange}

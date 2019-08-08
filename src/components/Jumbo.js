@@ -10,9 +10,9 @@ export class Jumbo extends Component {
                 <h1> MARSHALL SLEMP </h1>
                 <p> web developer </p>
                 <ul id='nav-list'>
-                    <li><a href="#about"> about </a></li>
-                    <li><a href="#contact"> contact </a></li>
-                    <li><a href="#projects"> projects </a></li>
+                    <a href="#about"><li> about </li></a>
+                    <a href="#contact"><li> contact </li></a>
+                    <a href="#projects"><li> projects </li></a>
                 </ul>
             </div>
         )

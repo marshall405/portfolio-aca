@@ -5,12 +5,15 @@
     width: 100%;
     font-size: .85rem;
   }
-  
-  
+
+  /* rgb(205, 227, 37) */
+
+  /* 255,255,0 */
   .nav a {
     padding: 15px;
     display: block;
     margin: 5px;
+
   }
   
   
@@ -34,24 +37,27 @@
     background-color: rgba(25, 75, 141, 1);
   }
   .nav-container .brand, .nav-container .social {
-    box-shadow: 1px 1px 1px 0px rgb(205, 227, 37);
+    box-shadow: 1px 1px 1px 0px rgb(255,247,0);
   }
   .nav-container .brand a {
     padding: 10px;
     font-size: .95rem;
-    color: rgb(205, 227, 37);
+    color: rgb(255,255,0);
   }
   .nav-container .social {
     background-color: rgb(25, 75, 141);
     border-radius: 5px;
   }
   .brand a, .social a {
-    color: rgb(205, 227, 37);
+    /* color: rgb(255,247,0); */
+    color: rgb(255, 255, 0);
+    border-top: 2px solid rgba(0,0,0,0);
     border-bottom: 2px solid rgba(205, 227, 37,0);
     opacity: .9;
   }
   .nav-container .brand a:hover, .nav-container .social a:hover {
-    border-bottom: 2px solid rgb(205, 227, 37);
+    border-bottom: 2px solid rgb(255,255,0);
+    border-top: 2px solid rgba(255,255,0,1);
   }
  
   .nav-container .social {

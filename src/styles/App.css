@@ -1,6 +1,7 @@
 html {
   font-family: 'Montserrat', sans-serif;
   color: #413f3f;
+  background-color: rgb(255,255,0);
   scroll-behavior: smooth;
   /* -webkit-overflow-scrolling: touch; */
   letter-spacing: 1px;
@@ -36,15 +37,19 @@ a {
 h3 {
   font-size: 2em;
   text-decoration-line: underline;
-  text-decoration-color: rgb(205, 227, 37);
+  text-decoration-color: rgb(255, 255, 0);
+  color: rgba(25, 75, 141, 1);
   transform: rotate(355deg);
   margin: 0px 0px 20px 0px;
 }
 
 
 /*        SECTION        */
-
+.content-container {
+  /* background-color: rgba(25, 75, 141, 1); */
+}
 .section {
+  /* color: rgb(255, 255, 0); */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -52,11 +57,11 @@ h3 {
   padding: 10px 10px;
   position: relative;
   animation: fadein .5s;
-  background: rgba(255, 255, 255, .8);
+  background-color: rgba(255,255,255,.8);
   padding: 30px;
   min-height: 50vh; 
-  max-width: 700px;
-  margin: 10px auto;
+  max-width: 900px;
+  margin: 30px auto;
   border-radius: 5px;
 }
 
