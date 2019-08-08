@@ -82,15 +82,16 @@ export class CreatePost extends React.Component {
         }
     }
     messageSent() {
-        setTimeout(() => {
-            this.setState({
-                messageSent: false,
-            });
-        }, 15000);
+
         if (this.state.messageSent) {
+            setTimeout(() => {
+                this.setState({
+                    messageSent: false,
+                });
+            }, 4000);
             return (
                 <div id='messageSent'>
-                    Success!
+                    Sending...
                 </div>
             )
         } else {

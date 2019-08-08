@@ -32,7 +32,7 @@ export class Canvas extends React.Component {
         let x = 0;
         let y = 0;
         let dx = 40;//150
-        let dy = 0; //10
+        // let dy = 0; //10
 
 
         let drawRAF; // used as requestAnimationFrame ID
