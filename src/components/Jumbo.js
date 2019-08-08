@@ -6,7 +6,7 @@ import '../styles/jumbo.css';
 export class Jumbo extends Component {
     render() {
         return (
-            <div className='jumbo'>
+            <div className='jumbo' id='M S'>
                 <h1> MARSHALL SLEMP </h1>
                 <p> web developer </p>
                 <ul id='nav-list'>
@@ -17,6 +17,5 @@ export class Jumbo extends Component {
             </div>
         )
     }
-
 }
 

@@ -1,42 +1,58 @@
-const SafariSmoothScroll = () => {
+export const SafariSmoothScroll = () => {
+
     const clientBrowser = window.clientInformation.vendor;
     const isApple = clientBrowser.match(/apple/gi);
 
-    //add event listeners to the nav #about, #contact, #projects
+
     if (isApple) {
-        console.log('initiate smooth scroll override');
+        console.log('initiate smooth scroll override!');
         let scrollFrom = 0;
         let scrollTo;
         let whichElement = '';
-
+        let increment = 50;
+        let goUp = false;
+        //add event listeners to the nav #about, #contact, #projects
         const navList = document.getElementById('nav-list');
-        navList.addEventListener('click', e => {
+        navList.addEventListener('click', addScroll);
+
+        // add event listener to MS logo to scroll back to top
+        const logo = document.getElementById('logo');
+        logo.addEventListener('click', addScroll);
+
+
+        function addScroll(e) {
+            scrollFrom = window.scrollY;
             e.preventDefault();
             e.stopPropagation();
             whichElement = e.target.innerText ? document.getElementById(e.target.innerText) : '';
             if (whichElement) {
                 scrollTo = whichElement.offsetTop;
-
+                if (scrollFrom > scrollTo) {
+                    increment = -increment;
+                    goUp = true;
+                }
                 let scroll = setInterval(() => {
                     window.scrollTo(0, scrollFrom);
-                    scrollFrom += 50;
-                    if (scrollFrom >= scrollTo) {
+                    scrollFrom += increment;
+                    if (goUp) {
+                        if (scrollFrom <= scrollTo) {
+                            clearInterval(scroll);
+                            clearSettings();
+                        }
+                    } else if (scrollFrom >= scrollTo) {
                         clearInterval(scroll);
-                        scrollFrom = 0;
-                        whichElement = '';
-                        scrollTo = 0;
+                        clearSettings();
+
                     }
                 }, 16);
             }
-        });
+        }
+        function clearSettings() {
+            scrollFrom = 0;
+            whichElement = '';
+            scrollTo = 0;
+            increment = 50;
+            goUp = false;
+        }
     }
-
-
-
-
-
-
-
-
 }
-export default SafariSmoothScroll;

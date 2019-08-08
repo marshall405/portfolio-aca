@@ -8,7 +8,7 @@ const canvasStyle = {
     top: '0px',
     left: '0px',
     width: '100vw',
-    height: '100vh'
+    height: '100vh',
 }
 
 // color: rgb(25, 75, 141);

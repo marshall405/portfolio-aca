@@ -8,8 +8,7 @@ import { Projects } from './components/Projects';
 import { Canvas } from './components/Canvas';
 import { Jumbo } from './components/Jumbo';
 
-import SafariSmoothScroll from './scripts/SafariSmoothScroll';
-
+import { SafariSmoothScroll } from './scripts/SafariSmoothScroll';
 
 // import styles
 import './styles/App.css';
