@@ -5,7 +5,7 @@ export class Contact extends React.Component {
     render() {
         return (
             <div className='section' id='contact'>
-                <h3> CONTACT </h3>
+                <h2> CONTACT </h2>
                 <p> Get in touch with me on
                     <a href='https://www.linkedin.com/in/marshall-slemp/' target='_blank' rel="noopener noreferrer" > LinkedIn</a>
                 </p>

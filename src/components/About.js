@@ -12,7 +12,7 @@ export class About extends React.Component {
     render() {
         return (
             <div className='section' id='about'>
-                <h3> ABOUT </h3>
+                <h2> ABOUT </h2>
                 <p> Hello, my name is Marshall. I am a Front End Developer living in Round Rock, TX. </p>
                 <p> Currently seeking a junior web developer position around Austin, TX. </p>
                 <div className='image-container'>
