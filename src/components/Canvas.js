@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const canvasStyle = {
-    zIndex: '-1',
+    zIndex: '-2',
     backgroundColor: 'white',
     position: 'fixed',
     top: '0px',
@@ -19,53 +19,138 @@ export class Canvas extends React.Component {
     renderCanvas() {
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        let counter = 0;
+        console.log(height, width);
+        ctx.globalAlpha = .4;
+        ctx.fillStyle = 'rgba(25, 75, 141, .8)';
+        ctx.strokeStyle = 'rgba(255,255,0,1)';
 
-        // used for colors RGB
-        let r = 25;
-        let g = 75;
-        let b = 141;
+        const Snake = {
+            body: [],
+            direction: 'up',
+            X: 25,
+            draw: function () {
+                this.body.forEach(sec => {
+                    let { x, y, w, h } = sec;
+                    ctx.fillRect(x, y, w, h);
+                    ctx.strokeRect(x, y, w, h);
+                });
+            },
+            move: function () {
 
+                switch (this.direction) {
+                    case 'right':
+                        let x = (this.body[this.body.length - 1].x) + this.X;
+                        if (x >= canvas.width) {
+                            this.changeDirection();
+                        } else {
+                            const tail = this.body.shift();
+                            tail.x = x;
+                            tail.y = (this.body[this.body.length - 1].y);
+                            this.body.push(tail);
+                        }
+                        break;
+                    case 'left':
+                        let lx = (this.body[this.body.length - 1].x) - this.X;
+                        if (lx <= 0) {
+                            this.changeDirection();
+                        } else {
+                            const tail = this.body.shift();
+                            tail.x = lx;
+                            tail.y = (this.body[this.body.length - 1].y);
+                            this.body.push(tail);
+                        }
+                        break;
+                    case 'up':
+                        let y = (this.body[this.body.length - 1].y) - this.X;
+                        if (y <= 0) {
+                            this.changeDirection();
+                        } else {
+                            const tail = this.body.shift();
+                            tail.y = y;
+                            tail.x = (this.body[this.body.length - 1].x);
+                            this.body.push(tail);
+                        }
+                        break;
+                    case 'down':
+                        let dy = (this.body[this.body.length - 1].y) + this.X;
+                        if (dy >= canvas.height) {
+                            this.changeDirection();
+                        }
+                        else {
+                            const tail = this.body.shift();
+                            tail.y = dy;
+                            tail.x = (this.body[this.body.length - 1].x);
+                            this.body.push(tail);
+                        }
+                        break;
+                    default:
+                        break;
+                }
 
-        const width = 150; //150
-        const height = window.screen.height; //150
+            },
+            changeDirection: function () {
+                if (this.direction === 'left' || this.direction === 'right') {
+                    const random = Math.random();
+                    if (random < .5) {
+                        this.direction = 'up';
+                    } else {
+                        this.direction = 'down';
+                    }
+                } else if (this.direction === 'up' || this.direction === 'down') {
+                    const random = Math.random();
+                    if (random < .5) {
+                        this.direction = 'left';
+                    } else {
+                        this.direction = 'right';
+                    }
+                } else {
+                    // nothing
+                }
+            },
 
-        let x = 0;
-        let y = 0;
-        let dx = 40;//150
-        // let dy = 0; //10
+        }
 
+        function createSnake() {
+            for (let i = 0; i < 10; i++) {
+                Snake.body.push(Square(i));
+            }
+        }
 
-        let drawRAF; // used as requestAnimationFrame ID
+        function Square(i) {
+            let x = function () {
+                return i * 25;
+            }
+            return {
+                w: 25,
+                h: 25,
+                x: x(),
+                y: height / 2,
+            }
+        }
 
+        createSnake();
+        Snake.move();
+        console.log(Snake.body);
         function draw() {
-            ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
-            ctx.fillRect(x, y, width, height);
-            if (x + width > canvas.width || x < 0) {
-                dx = -dx;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            Snake.draw();
+            Snake.move();
+
+            counter++;
+            if (counter > 10) {
+                Snake.changeDirection();
+                counter = 0;
             }
 
-            // increment fillRect 
-            x += dx;
 
-
-
-            // increment color scheme
-            r += 4;
-            g += 3;
-            b -= 4;
-
-            drawRAF = requestAnimationFrame(draw);
         }
-        drawRAF = requestAnimationFrame(draw);
-
-        setTimeout(() => {
-            console.log('stop draw animation');
-
-            cancelAnimationFrame(drawRAF);
-        }, 5000); //stop draw animation after 5 seconds
+        setInterval(draw, 50);
 
     }
     render() {
-        return <canvas style={canvasStyle} id='canvas' width='1000px' height='1000px'></canvas>
+        return <canvas style={canvasStyle} id='canvas' width={`${window.outerWidth / 1}px`} height={`${window.outerHeight / 1}px`} ></canvas >
     }
 }
