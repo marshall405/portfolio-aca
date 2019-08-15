@@ -19,10 +19,9 @@ export class Canvas extends React.Component {
     renderCanvas() {
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
-        const width = window.innerWidth;
+        // const width = window.innerWidth;
         const height = window.innerHeight;
         let counter = 0;
-        console.log(height, width);
         ctx.globalAlpha = .4;
         ctx.fillStyle = 'rgba(25, 75, 141, .8)';
         ctx.strokeStyle = 'rgba(255,255,0,1)';
@@ -133,7 +132,6 @@ export class Canvas extends React.Component {
 
         createSnake();
         Snake.move();
-        console.log(Snake.body);
         function draw() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             Snake.draw();

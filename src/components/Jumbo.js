@@ -20,7 +20,6 @@ export class Jumbo extends Component {
             if (left > window.outerWidth) {
                 cancelAnimationFrame(raf);
                 document.getElementById('M S').removeChild(div);
-                console.log('stop');
             }
         }
         moveDiv();
@@ -28,7 +27,7 @@ export class Jumbo extends Component {
     }
     render() {
         return (
-            <div id='jumbo' className='jumbo' id='M S'>
+            <div className='jumbo' id='M S'>
                 <div id='reveal'></div>
                 <h1> marshall slemp </h1>
                 <p> web developer </p>

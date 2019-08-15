@@ -22,8 +22,8 @@ export class Projects extends React.Component {
 
     }
     renderProjects() {
-        return projects.map(project => {
-            return <div className='project-container'>
+        return projects.map((project, index) => {
+            return <div key={index} className='project-container'>
                 <h3> {project.title} </h3>
                 <p> {project.desc} </p>
                 <a href={project.link} target='_blank'> view project </a>
