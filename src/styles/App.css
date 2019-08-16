@@ -41,7 +41,7 @@ h2 {
   text-decoration-color: rgb(255, 255, 0);
   color: rgba(25, 75, 141, 1);
   transform: rotate(355deg);
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 25px 0px;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Lexend+Tera&display=swap');
@@ -63,10 +63,11 @@ h2 {
   background-color: rgba(255,255,255,.8);
   padding: 30px;
   min-height: 50vh; 
-  max-width: 900px;
-  margin: 30px auto;
+  max-width: 1050px;
+  margin: 10px auto;
   border-radius: 5px;
   background-image: linear-gradient(to right, rgba(45, 90, 121, .4), rgba(217, 219, -51, .4));
+ 
 }
 
 .section p {

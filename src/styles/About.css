@@ -7,3 +7,11 @@
     text-align: center;
     width: 100%;
 }
+
+.skills-container {
+    display: flex;
+}
+.skills-container *::before {
+    content: '|'
+}
+

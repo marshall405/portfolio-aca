@@ -29,7 +29,7 @@ export class Canvas extends React.Component {
         const Snake = {
             body: [],
             direction: 'up',
-            X: 25,
+            X: 50,
             draw: function () {
                 this.body.forEach(sec => {
                     let { x, y, w, h } = sec;
@@ -42,7 +42,7 @@ export class Canvas extends React.Component {
                 switch (this.direction) {
                     case 'right':
                         let x = (this.body[this.body.length - 1].x) + this.X;
-                        if (x >= canvas.width) {
+                        if (x > canvas.width) {
                             this.changeDirection();
                         } else {
                             const tail = this.body.shift();
@@ -53,7 +53,7 @@ export class Canvas extends React.Component {
                         break;
                     case 'left':
                         let lx = (this.body[this.body.length - 1].x) - this.X;
-                        if (lx <= 0) {
+                        if (lx <= -10) {
                             this.changeDirection();
                         } else {
                             const tail = this.body.shift();
@@ -120,11 +120,11 @@ export class Canvas extends React.Component {
 
         function Square(i) {
             let x = function () {
-                return i * 25;
+                return i * 50;
             }
             return {
-                w: 25,
-                h: 25,
+                w: 50,
+                h: 50,
                 x: x(),
                 y: height / 2,
             }

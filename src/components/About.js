@@ -19,12 +19,16 @@ export class About extends React.Component {
                     <img src={Cabo} alt='me in cabo'></img>
                 </div>
                 <h4> Skills </h4>
-                <ul>
+                <ul className='skills-container'>
                     <li> HTML </li>
                     <li> CSS</li>
                     <li> JavaScript </li>
-                    <li> React JS</li>
-
+                    <li> ReactJS</li>
+                    <li> Git</li>
+                    <li> Node.js</li>
+                    <li> ExpressJS</li>
+                    <li> MySQL </li>
+                    <li> </li>
                 </ul>
             </div>
         )
