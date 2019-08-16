@@ -29,7 +29,7 @@ export class Canvas extends React.Component {
         const Snake = {
             body: [],
             direction: 'up',
-            X: 50,
+            X: 25,
             draw: function () {
                 this.body.forEach(sec => {
                     let { x, y, w, h } = sec;
@@ -120,11 +120,11 @@ export class Canvas extends React.Component {
 
         function Square(i) {
             let x = function () {
-                return i * 50;
+                return i * 25;
             }
             return {
-                w: 50,
-                h: 50,
+                w: 25,
+                h: 25,
                 x: x(),
                 y: height / 2,
             }
