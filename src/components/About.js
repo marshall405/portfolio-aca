@@ -28,7 +28,6 @@ export class About extends React.Component {
                     <li> Node.js</li>
                     <li> ExpressJS</li>
                     <li> MySQL </li>
-                    <li> </li>
                 </ul>
             </div>
         )

@@ -7,8 +7,8 @@ const canvasStyle = {
     position: 'fixed',
     top: '0px',
     left: '0px',
-    width: '100vw',
-    height: '100vh',
+    width: '99vw',
+    height: '99vh',
 }
 
 // color: rgb(25, 75, 141);
@@ -42,7 +42,7 @@ export class Canvas extends React.Component {
                 switch (this.direction) {
                     case 'right':
                         let x = (this.body[this.body.length - 1].x) + this.X;
-                        if (x > canvas.width) {
+                        if (x >= canvas.width - 5) {
                             this.changeDirection();
                         } else {
                             const tail = this.body.shift();

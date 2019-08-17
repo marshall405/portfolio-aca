@@ -10,8 +10,9 @@
 
 .skills-container {
     display: flex;
+    flex-wrap: wrap;
 }
 .skills-container *::before {
-    content: '|'
+    content: '|';
 }
 
