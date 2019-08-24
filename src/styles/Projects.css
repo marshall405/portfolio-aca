@@ -21,3 +21,37 @@
 .project-container a:hover {
     text-decoration-color: rgb(255,255,0);
 }
+
+.project-container p {
+    font-size: 1em !important;
+}
+.project-container img {
+    max-width: 350px;
+    max-height: 400px;
+    min-height: 220px;
+    width: 80%;
+    border-radius: 10px;
+    opacity: .8; 
+}
+
+.-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.-container > p {
+    flex: 1;
+}
+.-container > div {
+    flex: 1;
+}
+
+.image-container > *{
+    display: block;
+}
+
+@media screen and (max-width: 690px){
+    .-container {
+        display: block;
+    }
+}

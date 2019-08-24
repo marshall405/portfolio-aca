@@ -15,7 +15,7 @@ export class About extends React.Component {
                 <h2> ABOUT </h2>
                 <p> Hello, my name is Marshall. I am a Front End Developer living in Round Rock, TX. </p>
                 <p> Currently seeking a junior web developer position around Austin, TX. </p>
-                <div className='image-container'>
+                <div className='about-image-container'>
                     <img src={Cabo} alt='me in cabo'></img>
                 </div>
                 <h4> Skills </h4>
