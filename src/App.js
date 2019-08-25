@@ -9,6 +9,7 @@ import { Canvas } from './components/Canvas';
 import { Jumbo } from './components/Jumbo';
 
 import { SafariSmoothScroll } from './scripts/SafariSmoothScroll';
+import { handleScroll } from './scripts/handleScroll.js';
 
 // import styles
 import './styles/App.css';
@@ -16,6 +17,7 @@ import './styles/App.css';
 class App extends Component {
   componentDidMount() {
     SafariSmoothScroll();
+    handleScroll();
   }
   render() {
     return (

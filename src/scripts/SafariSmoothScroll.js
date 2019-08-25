@@ -5,7 +5,6 @@ export const SafariSmoothScroll = () => {
 
 
     if (isApple) {
-        console.log('initiate smooth scroll override!');
         let scrollFrom = 0;
         let scrollTo;
         let whichElement = '';
@@ -24,7 +23,20 @@ export const SafariSmoothScroll = () => {
             scrollFrom = window.scrollY;
             e.preventDefault();
             e.stopPropagation();
-            whichElement = e.target.innerText ? document.getElementById(e.target.innerText) : '';
+            whichElement = e.target;
+            switch (whichElement.innerText) {
+                case 'about':
+                    whichElement = document.getElementById('about');
+                    break;
+                case 'contact':
+                    whichElement = document.getElementById('contact');
+                    break;
+                case 'projects':
+                    whichElement = document.getElementById('projects');
+                    break;
+                default:
+                    break;
+            }
             if (whichElement) {
                 scrollTo = whichElement.offsetTop;
                 if (scrollFrom > scrollTo) {
