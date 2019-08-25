@@ -20,12 +20,11 @@ export class About extends React.Component {
                 </div>
                 <h4> Skills </h4>
                 <ul className='skills-container'>
-                    <li> HTML </li>
-                    <li> CSS</li>
+                    <li> HTML/CSS </li>
                     <li> JavaScript </li>
-                    <li> ReactJS</li>
-                    <li> Git</li>
-                    <li> Node.js</li>
+                    <li> React</li>
+                    <li> Git/Github</li>
+                    <li> NodeJS</li>
                     <li> ExpressJS</li>
                     <li> MySQL </li>
                 </ul>

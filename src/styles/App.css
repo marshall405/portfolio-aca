@@ -62,7 +62,7 @@ h2 {
   animation: fadein .5s;
   background-color: rgba(255,255,255,.8);
   padding: 30px;
-  min-height: 50vh; 
+  min-height: 100vh; 
   max-width: 1050px;
   margin: 10px auto;
   border-radius: 5px;

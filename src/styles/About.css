@@ -8,7 +8,11 @@
     width: 100%;
 }
 
+#about h4 {
+    margin-top: 40px;
+}
 .skills-container {
+    margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
 }
