@@ -15,9 +15,12 @@ import { handleScroll } from './scripts/handleScroll.js';
 import './styles/App.css';
 
 class App extends Component {
+
   componentDidMount() {
     SafariSmoothScroll();
     handleScroll();
+    // wake up contact server 
+    fetch('https://lit-mountain-55987.herokuapp.com/wakeup');
   }
   render() {
     return (
