@@ -20,7 +20,7 @@ class App extends Component {
     SafariSmoothScroll();
     handleScroll();
     // wake up contact server 
-    fetch('https://lit-mountain-55987.herokuapp.com/wakeup');
+    fetch('https://lit-mountain-55987.herokuapp.com/wakeup').then(res => console.log('wake up'));
   }
   render() {
     return (
