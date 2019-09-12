@@ -5,10 +5,17 @@ import '../styles/Projects.css';
 
 // import images
 import weather from '../images/weather.png';
+import fallingBlocks from '../images/fallingBlocks.png';
 import snake from '../images/snake.png';
 import website from '../images/website.png';
 import contact from '../images/contact.png';
 const projects = [
+    {
+        title: 'Falling Blocks',
+        desc: 'Another HTML5 Canvas game using vanilla JavaScript.',
+        link: 'https://marshall405.github.io/fallingBlocks/index.html',
+        img: fallingBlocks
+    },
     {
         title: 'Classic Snake',
         desc: 'The classic snake game made using HTML5\'s canvas API and vanilla JavaScript. I first wrote this game using nothing but the developer tools console.',

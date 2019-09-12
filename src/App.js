@@ -7,6 +7,7 @@ import { Contact } from './components/Contact';
 import { Projects } from './components/Projects';
 import { Canvas } from './components/Canvas';
 import { Jumbo } from './components/Jumbo';
+import { Bubbles } from './components/Bubbles';
 
 import { SafariSmoothScroll } from './scripts/SafariSmoothScroll';
 import { handleScroll } from './scripts/handleScroll.js';
@@ -25,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <div className='container'>
-        <Canvas />
+        <Bubbles />
         <Heading />
         <Jumbo />
 

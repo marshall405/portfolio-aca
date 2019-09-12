@@ -149,6 +149,6 @@ export class Canvas extends React.Component {
 
     }
     render() {
-        return <canvas style={canvasStyle} id='canvas' width={`${window.outerWidth / 1}px`} height={`${window.outerHeight / 1}px`} ></canvas >
+        return <canvas style={canvasStyle} id='canvas' width={`${window.outerWidth}px`} height={`${window.outerHeight}px`} ></canvas >
     }
 }
