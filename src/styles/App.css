@@ -35,7 +35,7 @@ html {
 #changeCanvas {
   z-index: 3;
   position: absolute;
-  top: calc(100% / 2 - 18px);
+  top: 150px;
   left: calc(100% - 40px);
   border: none;
   margin: 0;

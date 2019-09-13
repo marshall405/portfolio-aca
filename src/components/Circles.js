@@ -89,10 +89,8 @@ export class Circles extends React.Component {
             let spin;
             for (let i = 0; i < 40; i++) {
                 if (radius + canvas.width / 2 >= canvas.width) {
-                    console.log('breaking')
                     break;
                 }
-                console.log(radius)
                 startAngle = utils.randomIntFromRange(0, Math.PI);
                 endAngle = utils.randomIntFromRange(startAngle, Math.PI * 2);
                 radius += 10;
