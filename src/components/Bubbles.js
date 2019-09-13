@@ -7,8 +7,7 @@ const canvasStyle = {
     position: 'fixed',
     top: '0px',
     left: '0px',
-    width: '99vw',
-    height: '99vh',
+
 }
 
 export class Bubbles extends React.Component {

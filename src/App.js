@@ -5,9 +5,11 @@ import { Heading } from './components/Heading';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
 import { Projects } from './components/Projects';
-import { Canvas } from './components/Canvas';
 import { Jumbo } from './components/Jumbo';
+
+import { Canvas } from './components/Canvas';
 import { Bubbles } from './components/Bubbles';
+import { Circles } from './components/Circles';
 
 import { SafariSmoothScroll } from './scripts/SafariSmoothScroll';
 import { handleScroll } from './scripts/handleScroll.js';
@@ -16,17 +18,37 @@ import { handleScroll } from './scripts/handleScroll.js';
 import './styles/App.css';
 
 class App extends Component {
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      canvas: 0
+    }
+    this.changeCanvas = this.changeCanvas.bind(this)
+  }
   componentDidMount() {
     SafariSmoothScroll();
     handleScroll();
     // wake up contact server 
     fetch('https://lit-mountain-55987.herokuapp.com/wakeup');
   }
+  renderCanvas() {
+    const canvas = [<Bubbles />, <Circles />, <Canvas />]
+    return canvas[this.state.canvas];
+  }
+  changeCanvas() {
+    let currentState = this.state.canvas + 1;
+    if (currentState > 2) {
+      currentState = 0
+    }
+    this.setState({
+      canvas: currentState
+    })
+  }
   render() {
     return (
       <div className='container'>
-        <Bubbles />
+        {this.renderCanvas()}
+        <button id='changeCanvas' onClick={this.changeCanvas}> > </button>
         <Heading />
         <Jumbo />
 

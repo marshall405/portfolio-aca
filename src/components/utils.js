@@ -1,5 +1,8 @@
-function randomIntFromRange(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min)
+function randomIntFromRange(min, max, floor) {
+    if (floor) {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+    return Math.random() * (max - min) + min
 }
 
 function randomColor(colors) {
