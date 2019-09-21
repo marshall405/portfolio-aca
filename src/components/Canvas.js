@@ -17,6 +17,15 @@ export class Canvas extends React.Component {
         ctx.fillStyle = 'rgba(25, 75, 141, .8)';
         ctx.strokeStyle = 'rgba(255,255,0,1)';
 
+        canvas.width = window.innerWidth
+        canvas.height = window.innerHeight
+
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth
+            canvas.height = window.innerHeight
+
+        })
         const Snake = {
             body: [],
             direction: 'up',
@@ -125,6 +134,9 @@ export class Canvas extends React.Component {
         Snake.move();
         function draw() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.globalAlpha = .4;
+            ctx.fillStyle = 'rgba(25, 75, 141, .8)';
+            ctx.strokeStyle = 'rgba(255,255,0,1)';
             Snake.draw();
             Snake.move();
 
@@ -140,6 +152,6 @@ export class Canvas extends React.Component {
 
     }
     render() {
-        return <canvas style={{ backgroundColor: this.props.color }} id='canvas' width={`${window.outerWidth}px`} height={`${window.outerHeight}px`} ></canvas >
+        return <canvas style={{ backgroundColor: this.props.color }} id='canvas' ></canvas >
     }
 }
