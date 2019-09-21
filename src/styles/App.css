@@ -5,7 +5,7 @@ html {
   scroll-behavior: smooth;
   /* -webkit-overflow-scrolling: touch; */
   letter-spacing: 0px;
-  
+  background:  rgb(25, 75, 141);
 
 }
 ::selection {
@@ -36,7 +36,7 @@ html {
   z-index: 3;
   position: absolute;
   top: 150px;
-  left: calc(100% - 40px);
+  left: calc(100% - 80px);
   border: none;
   margin: 0;
   padding: 10px;
@@ -52,7 +52,28 @@ html {
   background: rgb(255, 255, 0);
   background: rgba(25, 75, 141, 1);
 }
+/*   Change Button for Canvas Color */
+#changeCanvasColor {
+  z-index: 3;
+  width: 150px;
+  position: absolute;
+  bottom: 50px;
+  left: calc(100% / 2 - 75px);
+  border: none;
+  margin: 0;
+  padding: 10px;
+  color: rgb(255, 255, 0);
+  font-size: 22px;
+  overflow: visible;
+  border-radius: 10px;
+  background: rgba(25, 75, 141, .6);
 
+}
+#changeCanvasColor:hover{
+  cursor: pointer;
+  background: rgb(255, 255, 0);
+  background: rgba(25, 75, 141, 1);
+}
 /*  STANDARDS    */
 
 /*        H3 Section Titles     */ 
@@ -134,4 +155,15 @@ h2 {
 }
 .change-colors:hover {
   cursor: pointer;
+}
+
+
+
+
+#canvas {
+  min-width: 300px;
+ z-index: -2;
+ position: fixed;
+ top: 0px;
+ left: 0px; 
 }

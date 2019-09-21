@@ -1,18 +1,9 @@
 import React from 'react';
 
 
-const canvasStyle = {
-    zIndex: '-2',
-    backgroundColor: 'white',
-    position: 'fixed',
-    top: '0px',
-    left: '0px',
-    width: '99vw',
-    height: '99vh',
-}
-
 // color: rgb(25, 75, 141);
 export class Canvas extends React.Component {
+
     componentDidMount() {
         this.renderCanvas();
     }
@@ -149,6 +140,6 @@ export class Canvas extends React.Component {
 
     }
     render() {
-        return <canvas style={canvasStyle} id='canvas' width={`${window.outerWidth}px`} height={`${window.outerHeight}px`} ></canvas >
+        return <canvas style={{ backgroundColor: this.props.color }} id='canvas' width={`${window.outerWidth}px`} height={`${window.outerHeight}px`} ></canvas >
     }
 }

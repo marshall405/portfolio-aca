@@ -1,22 +1,13 @@
 import React from 'react';
 import utils from './utils'
 
-const canvasStyle = {
-    zIndex: '-2',
-    backgroundColor: 'white',
-    position: 'fixed',
-    top: '0px',
-    left: '0px',
-
-}
-
 export class Bubbles extends React.Component {
-
     componentDidMount() {
         this.renderCanvas();
     }
 
     renderCanvas() {
+
         const canvas = document.querySelector('canvas')
         const c = canvas.getContext('2d')
 
@@ -195,7 +186,7 @@ export class Bubbles extends React.Component {
         animate()
     }
     render() {
-        return <canvas style={canvasStyle}></canvas >
+        return <canvas id="canvas" style={{ backgroundColor: this.props.color }}></canvas >
     }
 
 }

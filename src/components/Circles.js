@@ -1,21 +1,13 @@
 import React from 'react';
 import utils from './utils'
 
-const canvasStyle = {
-    zIndex: '-2',
-    backgroundColor: 'white',
-    position: 'fixed',
-    top: '0px',
-    left: '0px',
-
-}
 
 export class Circles extends React.Component {
-
     componentDidMount() {
         this.renderCanvas();
     }
     renderCanvas() {
+
         const canvas = document.querySelector('canvas')
         const c = canvas.getContext('2d')
 
@@ -27,8 +19,6 @@ export class Circles extends React.Component {
             y: window.innerHeight / 2,
             down: false
         }
-
-        const colors = ['#9e7a18', '#6edb40', '#2548ba']
 
         // Event Listeners
         window.addEventListener('mousedown', event => {
@@ -121,7 +111,7 @@ export class Circles extends React.Component {
         animate()
     }
     render() {
-        return <canvas style={canvasStyle}></canvas >
+        return <canvas id="canvas" style={{ backgroundColor: this.props.color }}></canvas >
     }
 
 }

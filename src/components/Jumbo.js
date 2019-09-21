@@ -4,27 +4,7 @@ import React, { Component } from 'react';
 import '../styles/jumbo.css';
 
 export class Jumbo extends Component {
-    // componentDidMount() {
-    //     this.reveal();
-    // }
-    // reveal() {
-    //     let left = 20;
-    //     let div = document.getElementById('reveal');
-    //     let raf;
 
-    //     function moveDiv() {
-
-    //         div.style.left = `${left}px`;
-    //         left += 20;
-    //         raf = requestAnimationFrame(moveDiv);
-    //         if (left > window.outerWidth) {
-    //             cancelAnimationFrame(raf);
-    //             document.getElementById('M S').removeChild(div);
-    //         }
-    //     }
-    //     moveDiv();
-
-    // }
     render() {
         return (
             <div className='jumbo' id='M S'>

@@ -22,7 +22,7 @@ export const SafariSmoothScroll = () => {
         function addScroll(e) {
             scrollFrom = window.scrollY;
             e.preventDefault();
-            e.stopPropagation();
+            // e.stopPropagation();
             whichElement = e.target;
             switch (whichElement.innerText) {
                 case 'about':

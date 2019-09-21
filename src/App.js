@@ -21,9 +21,11 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      canvas: 0
+      canvas: 0,
+      canvasColor: 'white'
     }
-    this.changeCanvas = this.changeCanvas.bind(this)
+    this.changeCanvas = this.changeCanvas.bind(this);
+    this.changeCanvasColor = this.changeCanvasColor.bind(this);
   }
   componentDidMount() {
     SafariSmoothScroll();
@@ -32,7 +34,7 @@ class App extends Component {
     fetch('https://lit-mountain-55987.herokuapp.com/wakeup');
   }
   renderCanvas() {
-    const canvas = [<Circles />, <Bubbles />, <Canvas />]
+    const canvas = [<Circles color={this.state.canvasColor} />, <Bubbles color={this.state.canvasColor} />, <Canvas color={this.state.canvasColor} />]
     return canvas[this.state.canvas];
   }
   changeCanvas() {
@@ -44,11 +46,20 @@ class App extends Component {
       canvas: currentState
     })
   }
+  changeCanvasColor() {
+    let color = this.state.canvasColor === 'white' ? 'black' : 'white';
+    let button = document.getElementById('changeCanvasColor');
+    button.innerText = color === 'white' ? 'night' : 'day';
+    this.setState({
+      canvasColor: color
+    })
+  }
   render() {
     return (
       <div className='container'>
         {this.renderCanvas()}
         <button id='changeCanvas' onClick={this.changeCanvas}> > </button>
+        <button id='changeCanvasColor' onClick={this.changeCanvasColor}> night </button>
         <Heading />
         <Jumbo />
 
