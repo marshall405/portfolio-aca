@@ -32,7 +32,7 @@ class App extends Component {
     fetch('https://lit-mountain-55987.herokuapp.com/wakeup');
   }
   renderCanvas() {
-    const canvas = [<Bubbles />, <Circles />, <Canvas />]
+    const canvas = [<Circles />, <Bubbles />, <Canvas />]
     return canvas[this.state.canvas];
   }
   changeCanvas() {
