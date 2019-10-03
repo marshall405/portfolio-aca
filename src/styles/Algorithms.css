@@ -33,3 +33,11 @@
     letter-spacing: 0px;
     margin: 15px;
 }
+
+#blog a {
+    width: 120px;
+}
+#blog a:hover {
+    background-color: rgba(25, 75, 141, 1);
+    border-radius: 10px;
+}
