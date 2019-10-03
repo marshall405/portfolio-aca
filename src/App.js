@@ -96,9 +96,9 @@ class App extends Component {
 
         <div className='content-container'>
           <About />
-          <Contact />
           <Projects />
           <Blog />
+          <Contact />
         </div>
         <div className='footer'>
           <h6> Made by Marshall Slemp 2019</h6>
