@@ -6,6 +6,7 @@ import { About } from './components/About';
 import { Contact } from './components/Contact';
 import { Projects } from './components/Projects';
 import { Jumbo } from './components/Jumbo';
+import { Blog } from './components/Blog';
 
 import { Canvas } from './components/Canvas';
 import { Bubbles } from './components/Bubbles';
@@ -97,6 +98,7 @@ class App extends Component {
           <About />
           <Contact />
           <Projects />
+          <Blog />
         </div>
         <div className='footer'>
           <h6> Made by Marshall Slemp 2019</h6>

@@ -16,7 +16,7 @@ export class About extends React.Component {
                 <p> Hello, my name is Marshall. I am a Front End Developer living in Round Rock, TX. </p>
                 <p> I am mostly self-taught but I did take an Intermediate JavaScript course at <a href='https://austincodingacademy.com/'>Austin Coding Academy</a> last fall!</p>
                 <p> Lately I have been learning more about the HTML5 Canvas along with collision detection and using Sprites.</p>
-                <p> I enjoy learning new technologies and trying to gain a deeper understanding of not just 'why' but 'how' things work. </p>
+                <p> I enjoy learning new technologies, working on cars and playing video games. </p>
                 <p> Currently seeking a junior web developer position around Austin, TX. </p>
                 <div className='about-image-container'>
                     <img src={Cabo} alt='me in cabo'></img>
