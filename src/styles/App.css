@@ -36,7 +36,7 @@ html {
   z-index: 3;
   position: absolute;
   top: 150px;
-  left: calc(100% - 80px);
+  left: calc(100% - 50px);
   border: none;
   margin: 0;
   padding: 10px;
@@ -57,8 +57,8 @@ html {
   z-index: 3;
   width: 150px;
   position: absolute;
-  bottom: 50px;
-  left: calc(100% / 2 - 75px);
+  bottom: 10px;
+  left: 10px;
   border: none;
   margin: 0;
   padding: 10px;
@@ -74,6 +74,34 @@ html {
   background: rgb(255, 255, 0);
   background: rgba(25, 75, 141, 1);
 }
+
+/* ADJUST CANVAS COLOR --SLIDER */
+#slider {
+  z-index: 10;
+  color: rgba(25, 75, 141, 1);
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+#slider div {
+  display: flex;
+  padding: 10px;
+}
+
+input {
+  width: 150px;
+}
+
+
+
+
+
+
+
+
+
+
 /*  STANDARDS    */
 
 /*        H3 Section Titles     */ 
@@ -166,4 +194,20 @@ h2 {
  position: fixed;
  top: 0px;
  left: 0px; 
+}
+
+
+@media screen and (max-height: 415px){
+  #changeCanvasColor {
+    width: 50px;
+    font-size: 12px;
+  }
+  #slider div {
+    padding: 0px;
+  }
+  #slider {
+    right: 0px;
+    bottom: 0px;
+  }
+
 }
