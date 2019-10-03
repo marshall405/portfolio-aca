@@ -68,7 +68,7 @@ export class Blog extends React.Component {
                     </ul>
                     <img src={maxChar} alt='code' />
                 </div>
-                <a href='/algorithms/algorithms.html' > see more </a>
+                <a href='/algorithms' > see more </a>
             </div>
         )
     }
