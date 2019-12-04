@@ -1,7 +1,7 @@
 #contact p a {
-    color: rgb(25, 75, 141);
+    color: rgb(8, 59, 81);
 }
 
 #contact p a:hover {
-    border-bottom: 2px solid rgb(205, 227, 37);
+    border-bottom: 2px solid rgb(8, 59, 81);
 }

@@ -74,11 +74,3 @@ export class Blog extends React.Component {
     }
 }
 
-{/* <div className='alg alg-container'>
-    <h3></h3>
-    <p> --  -- </p>
-    <ul>
-        <li></li>
-    </ul>
-    <img src={} alt='code' />
-</div> */}

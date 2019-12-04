@@ -11,30 +11,25 @@ export class Bubbles extends React.Component {
         const canvas = document.querySelector('canvas')
         const c = canvas.getContext('2d')
 
-        canvas.width = window.innerWidth
-        canvas.height = window.innerHeight
-        let count = (canvas.width / 10) + (canvas.height / 10);
+        canvas.width = 300;
+        canvas.height = 366
+        let count = 60
 
         const mouse = {
-            x: window.innerWidth / 2,
-            y: window.innerHeight / 2
+            x: canvas.innerWidth / 2,
+            y: canvas.innerHeight / 2
         }
 
-        const colors = ['#2185C5', '#7ECEFD', '#FF7F66', '#194b8d', '#ffff00']
+        const colors = ['rgb(8, 59, 81)', 'rgb(0,0,0)', 'rgb(25, 75, 141)', 'rgb(255, 255, 0)']
 
 
         // Event Listeners
-        window.addEventListener('mousemove', event => {
-            mouse.x = event.clientX
-            mouse.y = event.clientY
+        canvas.addEventListener('mousemove', event => {
+            mouse.x = event.offsetX
+            mouse.y = event.offsetY
         })
 
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth
-            canvas.height = window.innerHeight
-            count = (canvas.width / 15) + (canvas.height / 15);
-            init()
-        })
+
 
         // Objects
         function Circle(x, y, radius, color) {
@@ -77,8 +72,7 @@ export class Bubbles extends React.Component {
         function init() {
             circles = []
             for (let i = 0; i < count; i++) {
-                let r = 15
-                // let r = 200
+                let r = 10
                 let x = utils.randomIntFromRange(r, canvas.width - r)
                 let y = utils.randomIntFromRange(r, canvas.height - r)
                 if (i !== 0) {
@@ -103,7 +97,7 @@ export class Bubbles extends React.Component {
         }
         function mouseDetection(circle) {
             let { x, y } = circle
-            if (utils.distance(x, y, mouse.x, mouse.y) < 120 && circle.opacity < .2) {
+            if (utils.distance(x, y, mouse.x, mouse.y) < 80 && circle.opacity < .2) {
                 circle.opacity += .02
             } else if (circle.opacity > 0) {
                 circle.opacity -= .02

@@ -45,7 +45,7 @@
 .create-post-container input:focus,
 .create-post-container button:hover {
    outline: none;
-   border: 2px solid rgb(255, 255,0);
+   border: 2px solid rgb(8, 59, 81);
 }
 .create-post-container p {
     text-align: right;
@@ -79,7 +79,7 @@
     height: 200px;
     background-color: rgba(25, 75, 141, 1);
     background-image: linear-gradient(to right, rgba(45, 90, 121, .4), rgba(217, 219, -51, .4));
-    color: rgb(255, 255,0);
+    color: rgb(8, 59, 81);
     font-size: 32px;
     border-radius: 10px;
     margin: 0px auto;

@@ -18,7 +18,7 @@
     margin: 20px 0px;
     padding: 10px;
     border-radius: 10px;
-    border: 2px solid rgba(25, 75, 141, 1);
+    border: 2px solid rgb(8, 59, 81);
     /* background-color: white;  */
     text-align: left;
   
@@ -38,6 +38,6 @@
     width: 120px;
 }
 #blog a:hover {
-    background-color: rgba(25, 75, 141, 1);
+    background-color: rgb(8, 59, 81);
     border-radius: 10px;
 }

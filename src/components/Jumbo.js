@@ -8,7 +8,7 @@ export class Jumbo extends Component {
     render() {
         return (
             <div className='jumbo' id='M S'>
-                <div id='reveal'></div>
+
                 <h1> marshall slemp </h1>
                 <p> web developer </p>
                 <ul id='nav-list'>

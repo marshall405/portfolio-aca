@@ -1,6 +1,6 @@
 import React from 'react';
-
-// import styles
+import { Bubbles } from './Bubbles';
+// import style
 import '../styles/Projects.css';
 
 // import images
@@ -69,8 +69,18 @@ export class Projects extends React.Component {
         return (
             <div className='section' id='projects'>
                 <h2> PROJECTS </h2>
-                <p> More projects coming soon... </p>
+                <div className='project-container'>
+                    <h3> Bouncing Bubbles </h3>
+                    <div className='-container'>
+                        <p> Collision Dectection for the WIN!!!</p>
+                        <div className='image-container'>
+                            <Bubbles />
+                        </div>
+                    </div>
+                </div>
+
                 {this.renderProjects()}
+                <p> More projects coming soon... </p>
             </div>
         )
     }

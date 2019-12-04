@@ -32,11 +32,6 @@ class App extends Component {
   componentDidMount() {
     SafariSmoothScroll();
     handleScroll();
-
-
-    const slider = document.getElementById('slider');
-    slider.addEventListener('input', this.handlerSlider);
-
     // wake up contact server 
     fetch('https://lit-mountain-55987.herokuapp.com/wakeup');
   }
@@ -74,31 +69,17 @@ class App extends Component {
   render() {
     return (
       <div className='container'>
-        {this.renderCanvas()}
-        <div id='slider' className='colorRange'>
-          <div>
-            <label htmlFor='red'> r </label>
-            <input id='red' type='range' name='red' min='0' max='255' step='1' defaultValue='255' />
-          </div>
-          <div>
-            <label htmlFor='green'> g </label>
-            <input id='green' type='range' name='green' min='0' max='255' step='1' defaultValue='255' />
-          </div>
-          <div >
-            <label htmlFor='blue'> b </label>
-            <input id='blue' type='range' name='blue' min='0' max='255' step='1' defaultValue='255' />
-          </div>
-        </div>
-        <button id='changeCanvas' onClick={this.changeCanvas}> > </button>
-        <button id='changeCanvasColor' onClick={this.changeCanvasColor}> dark </button>
+        {/* {this.renderCanvas()} */}
+        {/* <Circles color={this.state.canvasColor} /> */}
+        {/* <Bubbles color={this.state.canvasColor} /> */}
         <Heading />
         <Jumbo />
 
         <div className='content-container'>
           <About />
           <Projects />
-          <Blog />
           <Contact />
+          <Blog />
         </div>
         <div className='footer'>
           <h6> Made by Marshall Slemp 2019</h6>
