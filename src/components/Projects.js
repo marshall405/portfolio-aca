@@ -72,7 +72,7 @@ export class Projects extends React.Component {
                 <div className='project-container'>
                     <h3> Bouncing Bubbles </h3>
                     <div className='-container'>
-                        <p> Collision Dectection for the WIN!!!</p>
+                        <p> Collision Detection for the WIN!!!</p>
                         <div className='image-container'>
                             <Bubbles />
                         </div>
