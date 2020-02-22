@@ -4,20 +4,15 @@ import React from 'react';
 import '../styles/About.css';
 import Cabo from '../images/newPic.jpg';
 export class About extends React.Component {
-
-    componentDidMount() {
-
-    }
-
     render() {
         return (
             <div className='section' id='about'>
                 <h2> ABOUT </h2>
-                <p> Hello, my name is Marshall. I am a Web Developer living in Round Rock, TX. </p>
-                <p> I am mostly self-taught but I did take an Intermediate JavaScript course at <a href='https://austincodingacademy.com/'>Austin Coding Academy</a> last fall!</p>
+                <p> Hello, my name is Marshall. I am a Web Developer living in Round Rock, TX.</p>
+                <p> I will be attending <a href='https://flatironschool.com/' target='blank'>FLATIRON's</a> Software Engineering bootcamp starting April 20, 2020! </p>
                 <p> I enjoy learning new technologies, working on cars and playing video games. </p>
                 <div className='about-image-container'>
-                    <img src={Cabo} alt='me in cabo'></img>
+                    <img id='profileImg' src={Cabo} alt='me in cabo'></img>
                 </div>
                 <h4> Skills </h4>
                 <ul className='skills-container'>
@@ -29,13 +24,6 @@ export class About extends React.Component {
                     <li> ExpressJS</li>
                     <li> MySQL </li>
                     <li> </li>
-                </ul>
-                <h4> Skills...in progress </h4>
-                <ul className='skills-container'>
-                    <li> Wordpress/PHP </li>
-                    <li> Bash Scripting </li>
-                    <li> Regular Expressions </li>
-                    <li>  </li>
                 </ul>
             </div>
         )

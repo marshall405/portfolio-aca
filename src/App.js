@@ -7,6 +7,7 @@ import { Contact } from './components/Contact';
 import { Projects } from './components/Projects';
 import { Jumbo } from './components/Jumbo';
 import { Blog } from './components/Blog';
+import HelpfulLinks from './components/HelpfulLinks';
 
 import { Canvas } from './components/Canvas';
 import { Bubbles } from './components/Bubbles';
@@ -80,6 +81,7 @@ class App extends Component {
           <Projects />
           <Contact />
           <Blog />
+          <HelpfulLinks />
         </div>
         <div className='footer'>
           <h6> Made by Marshall Slemp 2019</h6>

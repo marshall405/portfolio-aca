@@ -9,7 +9,21 @@ import fallingBlocks from '../images/fallingBlocks.png';
 import snake from '../images/snake.png';
 import website from '../images/website.png';
 import contact from '../images/contact.png';
+import reactToDo from '../images/reactToDo.png';
+import exchangeRates from '../images/exchangeRates.png';
 const projects = [
+    {
+        title: 'Exchange Rates',
+        desc: 'This app uses an API to get the exchange rates in different countries for the US Dollar. You can change the dollar amount to see the exchange value for a variety of currencies.',
+        link: 'https://marshall405.github.io/exchange-rate-app/',
+        img: exchangeRates
+    },
+    {
+        title: 'React To Do List',
+        desc: 'A simple to do list made using React Hooks. It also uses Local Storage to save your list.',
+        link: 'https://marshall405.github.io/react-todo-app/',
+        img: reactToDo
+    },
     {
         title: 'Falling Blocks',
         desc: 'Another HTML5 Canvas game using vanilla JavaScript.',
@@ -56,7 +70,7 @@ export class Projects extends React.Component {
                 <div className='-container'>
                     <p> {project.desc} </p>
                     <div className='image-container'>
-                        <a href={project.link} target=''> <img src={project.img} alt='' /> </a>
+                        <a href={project.link} target=''> <img src={project.img} alt={project.desc} /> </a>
                         <a href={project.link} target=''> view project </a>
                     </div>
                 </div>
@@ -69,6 +83,8 @@ export class Projects extends React.Component {
         return (
             <div className='section' id='projects'>
                 <h2> PROJECTS </h2>
+                {this.renderProjects()}
+
                 <div className='project-container'>
                     <h3> Bouncing Bubbles </h3>
                     <div className='-container'>
@@ -79,7 +95,7 @@ export class Projects extends React.Component {
                     </div>
                 </div>
 
-                {this.renderProjects()}
+
                 <p> More projects coming soon... </p>
             </div>
         )

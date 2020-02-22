@@ -5,17 +5,24 @@ import palindrome from '../images/palindrome1.png';
 import booWho from '../images/booWho.png';
 import fizzBuzz from '../images/fizzBuzz.png';
 import maxChar from '../images/maxChar.png';
+import flattenArray from '../images/flattenArray.png';
 
 export class Blog extends React.Component {
-
-    componentDidMount() {
-
-    }
-
     render() {
         return (
             <div className='section' id='blog'>
                 <h2> Algorithms using JavaScript </h2>
+                <div className='alg alg-container'>
+                    <h3>Flatten Array</h3>
+                    <p> Using recursion, we can iterate through the array, calling the same function for every element in the array that is also an array!</p>
+                    <p> WHAT!!??!!?? </p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <img src={flattenArray} alt='code' />
+                </div>
                 <div className='alg alg-container'>
                     <h3>Palindrome</h3>
                     <p> -- A palindrome is a word or phrase that reads the same backward as forward! -- </p>
