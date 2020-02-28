@@ -2,10 +2,11 @@
     margin: 10px 0px;
     padding: 10px;
     border-radius: 10px;
-    border: 2px solid rgb(8, 59, 81);
+    /* border: 2px solid rgb(8, 59, 81); */
     /* background-color: white;  */
     text-align: center;
-    /* box-shadow: 0px 0px 2px 2px white; */
+    box-shadow: 2px 2px 4px 1px rgb(8, 59, 81);
+
 }
 .project-container h3 {
     text-align: left;
@@ -23,6 +24,7 @@
 }
 
 .project-container p {
+    /* border-bottom: 1px solid rgb(8, 59, 81); */
     font-size: 1em !important;
 }
 .project-container img {
@@ -32,6 +34,7 @@
     width: 80%;
     border-radius: 10px;
     opacity: .8; 
+    box-shadow: 0px 0px 8px 2px rgb(8, 59, 81);
 }
 
 .-container {

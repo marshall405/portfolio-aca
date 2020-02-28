@@ -18,7 +18,8 @@
     margin: 20px 0px;
     padding: 10px;
     border-radius: 10px;
-    border: 2px solid rgb(8, 59, 81);
+    
+    box-shadow: 2px 2px 4px 1px rgb(8, 59, 81);
     /* background-color: white;  */
     text-align: left;
   
@@ -35,9 +36,13 @@
 }
 
 #blog a {
-    width: 120px;
+    width: 140px;
+    padding: 14px;
+    box-shadow: 2px 2px 4px 1px rgb(8, 59, 81);
+    border-radius: 10px;
 }
 #blog a:hover {
     background-color: rgb(8, 59, 81);
-    border-radius: 10px;
+    color:white;
+    
 }

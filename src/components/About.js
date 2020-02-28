@@ -9,7 +9,7 @@ export class About extends React.Component {
             <div className='section' id='about'>
                 <h2> ABOUT </h2>
                 <p> Hello, my name is Marshall. I am a Web Developer living in Round Rock, TX.</p>
-                <p> I will be attending <a href='https://flatironschool.com/' target='blank'>FLATIRON's</a> Software Engineering bootcamp starting April 20, 2020! </p>
+                <p> I will be attending <a href='https://flatironschool.com/' target='blank'><strong>FLATIRON's</strong></a> Software Engineering bootcamp starting April 20, 2020! </p>
                 <div className='about-image-container'>
                     <img id='profileImg' src={Cabo} alt='me in cabo'></img>
                 </div>

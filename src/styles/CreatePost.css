@@ -23,10 +23,11 @@
 .create-post-container input,
 .create-post-container textarea,
 .create-post-container button {
-    border: 2px solid #ffffff;
-    border-radius: 4px; 
+    border: 1px solid #ffffff;
+    border-radius: 5px; 
     font-size: 16px;
     padding: 5px;
+    background-color: rgba(252, 250, 250, 0.84);
    
 }
 .create-post-container textarea {
@@ -35,9 +36,11 @@
     width: 100%;
     margin: 0 auto;
     resize: none;
+    border: 1px solid rgb(8, 59, 81);
 }
 
 .create-post-container input {
+    border-bottom: 1px solid rgb(8, 59, 81);
     margin-right: 5px;
 }
 
@@ -45,7 +48,8 @@
 .create-post-container input:focus,
 .create-post-container button:hover {
    outline: none;
-   border: 2px solid rgb(8, 59, 81);
+   background-color: white;
+   border: 1px solid rgb(8, 59, 81);
 }
 .create-post-container p {
     text-align: right;
@@ -54,8 +58,8 @@
 }
 .create-post-container button {
     cursor: pointer;
-    background-color: #ffffff;
-    
+    /* background-color: #ffffff; */
+    box-shadow: 0px 0px 1px 1px rgb(8, 59, 81);
 }
 
 .alert {
