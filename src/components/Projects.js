@@ -7,8 +7,8 @@ import '../styles/Projects.css';
 import weather from '../images/weather.png';
 import fallingBlocks from '../images/fallingBlocks.png';
 import snake from '../images/snake.png';
-import website from '../images/website.png';
-import contact from '../images/contact.png';
+// import website from '../images/website.png';
+// import contact from '../images/contact.png';
 import reactToDo from '../images/reactToDo.png';
 import exchangeRates from '../images/exchangeRates.png';
 const projects = [
@@ -43,18 +43,18 @@ const projects = [
         link: 'https://marshall405.github.io/another-weather-app/',
         img: weather
     },
-    {
-        title: 'This Website',
-        desc: 'Built my website from scratch using React. I also created a bash command that uses SFTP to automatically upload files to cPanel that I can use anytime I make changes to my website. ',
-        link: '#top',
-        img: website
-    },
-    {
-        title: 'Contact Form',
-        desc: 'The contact form you see on this website was built from scratch and uses form validation. It also keeps track of the total characters typed in the \'message\' field. I also built the backend using Node, Express and MySQL and is hosted on Heroku.',
-        link: '#contact',
-        img: contact
-    }
+    // {
+    //     title: 'This Website',
+    //     desc: 'Built my website from scratch using React. I also created a bash command that uses SFTP to automatically upload files to cPanel that I can use anytime I make changes to my website. ',
+    //     link: '#top',
+    //     img: website
+    // },
+    // {
+    //     title: 'Contact Form',
+    //     desc: 'The contact form you see on this website was built from scratch and uses form validation. It also keeps track of the total characters typed in the \'message\' field. I also built the backend using Node, Express and MySQL and is hosted on Heroku.',
+    //     link: '#contact',
+    //     img: contact
+    // }
 
 ]
 

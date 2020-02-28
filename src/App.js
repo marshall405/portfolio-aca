@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // import my components
-import { Heading } from './components/Heading';
+// import { Heading } from './components/Heading';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
 import { Projects } from './components/Projects';
@@ -13,8 +13,8 @@ import { Canvas } from './components/Canvas';
 import { Bubbles } from './components/Bubbles';
 import { Circles } from './components/Circles';
 
-import { SafariSmoothScroll } from './scripts/SafariSmoothScroll';
-import { handleScroll } from './scripts/handleScroll.js';
+// import { SafariSmoothScroll } from './scripts/SafariSmoothScroll';
+// import { handleScroll } from './scripts/handleScroll.js';
 
 // import styles
 import './styles/App.css';
@@ -31,8 +31,8 @@ class App extends Component {
     this.handlerSlider = this.handlerSlider.bind(this);
   }
   componentDidMount() {
-    SafariSmoothScroll();
-    handleScroll();
+    // SafariSmoothScroll();
+    // handleScroll();
     // wake up contact server 
     fetch('https://lit-mountain-55987.herokuapp.com/wakeup');
   }
@@ -73,10 +73,11 @@ class App extends Component {
         {/* {this.renderCanvas()} */}
         {/* <Circles color={this.state.canvasColor} /> */}
         {/* <Bubbles color={this.state.canvasColor} /> */}
-        <Heading />
-        <Jumbo />
+        {/* <Heading /> */}
+
 
         <div className='content-container'>
+          <Jumbo />
           <About />
           <Projects />
           <Contact />

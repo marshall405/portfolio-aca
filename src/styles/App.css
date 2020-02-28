@@ -7,6 +7,9 @@ html {
   letter-spacing: 0px;
 
 }
+*{
+  box-sizing: border-box;
+}
 ::selection {
   background:  rgb(2, 20, 44);
   color: white;
@@ -122,6 +125,7 @@ h2 {
 /*        SECTION        */
 .container {
   font-family: 'Lexend Tera', sans-serif;
+  overflow: hidden;
   /* background-color: rgba(25, 75, 141, 1); */
   /* background-image: linear-gradient(to right, rgba(45, 90, 121, .4), rgba(217, 219, -51, .4)); */
 }

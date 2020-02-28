@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/heading.css';
+// import '../styles/heading.css';
 
 
 export function Heading(props) {
