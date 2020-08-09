@@ -17,7 +17,11 @@
     display: flex;
     flex-wrap: wrap;
 }
-.skills-container *::before {
-    content: '|';
+
+.skill {
+    margin: 5px;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 5px;
+    padding: 10px;
 }
 
