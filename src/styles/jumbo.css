@@ -7,20 +7,21 @@
     text-align: center;
     /* height: 300px; */
     margin: 0px auto 20px auto;
-    padding: 15px;
+    
     color: rgb(8, 59, 81);
     position: relative;
     background-image: linear-gradient(to right, rgba(45, 90, 121, 1), rgba(217, 219, -51, 1));
 
- 
+    height: 100vh;
   
 
 
 }
 .inner-jumbo {
-    padding: 5px;
-    width: 98%;
-  border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+
+  /* border-radius: 5px; */
     background-color: white;
     position: relative;
 }
@@ -37,10 +38,22 @@
     padding: 10px; 
 }
 
+.jumbo nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+}
+.jumbo nav.reveal {
+    background-color: #FFF;
+
+}
 .jumbo ul {
     display: flex;
     margin-top: 30px;
-    justify-content: center;
+    justify-content: flex-end;
 }
 .jumbo ul li a:hover {
    border-bottom: 2px solid rgb(8, 59, 81);

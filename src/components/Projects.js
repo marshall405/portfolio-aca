@@ -7,28 +7,30 @@ import '../styles/Projects.css';
 import weather from '../images/weather.png';
 import fallingBlocks from '../images/fallingBlocks.png';
 import snake from '../images/snake.png';
+import coffee from '../images/coffee.png';
+import cardtrader from '../images/cardtrader.png';
 // import website from '../images/website.png';
 // import contact from '../images/contact.png';
 import reactToDo from '../images/reactToDo.png';
 import exchangeRates from '../images/exchangeRates.png';
 const projects = [
     {
+        title: 'CoffeeWeb',
+        desc: 'A Website created using React, React Router and Semantic UI. Hosted on AWS S3 and a custom API for the Contact Form.',
+        link: 'http://oncoffeeweb.com/',
+        img: coffee
+    },
+    {
+        title: 'Card Trader',
+        desc: 'A Full Stack Application that allows users to upload and trade their sports cards. Made using React, React Router, Material UI, Ruby on Rails and PostgreSQL.',
+        link: 'https://5f7f9067fdf5b800b4a65669--card-trader.netlify.app/',
+        img: cardtrader
+    },
+    {
         title: 'Exchange Rates',
         desc: 'This app uses an API to get the exchange rates in different countries for the US Dollar. You can change the dollar amount to see the exchange value for a variety of currencies.',
         link: 'https://marshall405.github.io/exchange-rate-app/',
         img: exchangeRates
-    },
-    {
-        title: 'React To Do List',
-        desc: 'A simple to do list made using React Hooks. It also uses Local Storage to save your list.',
-        link: 'https://marshall405.github.io/react-todo-app/',
-        img: reactToDo
-    },
-    {
-        title: 'Falling Blocks',
-        desc: 'Another HTML5 Canvas game using vanilla JavaScript.',
-        link: 'https://marshall405.github.io/fallingBlocks/index.html',
-        img: fallingBlocks
     },
     {
         title: 'Classic Snake',
@@ -42,19 +44,7 @@ const projects = [
         desc: 'One of the first Applications I built with React. Uses the \'openweathermap\' API, and allows you to get the current weather by your Zipcode.',
         link: 'https://marshall405.github.io/another-weather-app/',
         img: weather
-    },
-    // {
-    //     title: 'This Website',
-    //     desc: 'Built my website from scratch using React. I also created a bash command that uses SFTP to automatically upload files to cPanel that I can use anytime I make changes to my website. ',
-    //     link: '#top',
-    //     img: website
-    // },
-    // {
-    //     title: 'Contact Form',
-    //     desc: 'The contact form you see on this website was built from scratch and uses form validation. It also keeps track of the total characters typed in the \'message\' field. I also built the backend using Node, Express and MySQL and is hosted on Heroku.',
-    //     link: '#contact',
-    //     img: contact
-    // }
+    }
 
 ]
 

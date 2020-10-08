@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 // import my components
-// import { Heading } from './components/Heading';
 import { About } from './components/About';
+import { Skills } from './components/Skills';
 import { Contact } from './components/Contact';
 import { Projects } from './components/Projects';
 import { Jumbo } from './components/Jumbo';
@@ -79,13 +79,18 @@ class App extends Component {
         <div className='content-container'>
           <Jumbo />
           <About />
+          <Skills />
           <Projects />
           <Contact />
-          <Blog />
+          {/* <Blog /> */}
           <HelpfulLinks />
         </div>
         <div className='footer'>
-          <h6> Made by Marshall Slemp 2019</h6>
+          <div className='footer-social'>
+            <a href='https://www.linkedin.com/in/marshall-slemp/' target='_blank' rel="noopener noreferrer" className='nav-icon'><i className="fab fa-linkedin-in"></i></a>
+            <a href='https://github.com/marshall405' target='_blank' rel="noopener noreferrer" className='nav-icon'><i className="fab fa-github"></i></a>
+          </div>
+          <h6> Marshall Slemp 2020</h6>
         </div>
       </div>
     )
