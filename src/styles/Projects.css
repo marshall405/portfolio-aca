@@ -29,12 +29,14 @@
 }
 .project-container img {
     max-width: 350px;
-    max-height: 400px;
-    min-height: 220px;
+    height: 300px;
     width: 80%;
     border-radius: 10px;
-    opacity: .8; 
+    filter: brightness(60%);
     box-shadow: 0px 0px 8px 2px rgb(8, 59, 81);
+}
+.project-container img:hover {
+    filter: brightness(100%);
 }
 
 .-container {

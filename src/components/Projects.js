@@ -8,12 +8,19 @@ import weather from '../images/weather.png';
 import fallingBlocks from '../images/fallingBlocks.png';
 import snake from '../images/snake.png';
 import coffee from '../images/coffee.png';
+import eyefind from '../images/eyefind.png';
 import cardtrader from '../images/cardtrader.png';
 // import website from '../images/website.png';
 // import contact from '../images/contact.png';
 import reactToDo from '../images/reactToDo.png';
 import exchangeRates from '../images/exchangeRates.png';
 const projects = [
+    {
+        title: 'eyefind.info',
+        desc: 'Eyefind is based off the website in the Grand Theft Auto series but uses YouTube videos. Built with React and lots of custom CSS. Hosted on Netlify! Still have more to add...working links, search, random functionality to name a few.',
+        link: 'https://nervous-lovelace-0ff825.netlify.app/',
+        img: eyefind
+    },
     {
         title: 'CoffeeWeb',
         desc: 'A Website created using React, React Router and Semantic UI. Hosted on AWS S3 and a custom API for the Contact Form.',
