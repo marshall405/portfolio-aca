@@ -1,9 +1,4 @@
-#about img {
-    min-width: 150px;
-    max-width: 170px;
-    border-radius: 5px; 
-    box-shadow: 5px 5px 10px 1px rgb(58, 58, 58);;
-}
+
 .about-image-container {
     text-align: center;
     width: 100%;
@@ -25,3 +20,33 @@
     padding: 10px;
 }
 
+
+.fas.arrow {
+    width: 50px;
+    font-size: 3em;
+    position: relative;
+}
+.fas.arrow:hover {
+    cursor: pointer;
+    font-size: 3.2em;
+}
+
+@media screen and (max-width: 500px){
+    .fas.arrow{
+        width: 20px;
+        font-size: 2.2em;
+    }
+    .fas.arrow:hover {
+        font-size: 2.4em;
+    }
+}
+
+.show {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+}
+
+.hide {
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+}
