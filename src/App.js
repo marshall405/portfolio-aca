@@ -13,16 +13,7 @@ import HelpfulLinks from './components/HelpfulLinks';
 import './styles/App.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    }
 
-  }
-  componentDidMount() {
-    // wake up contact server 
-    fetch('https://lit-mountain-55987.herokuapp.com/wakeup');
-  }
   render() {
     return (
       <div className='container'>

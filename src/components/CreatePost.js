@@ -14,6 +14,7 @@ export class CreatePost extends React.Component {
             isNameEmpty: false,
             isTitleEmpty: false,
             isTextEmpty: false,
+            sending: false,
             messageSent: false,
         }
         this.handleOnChange = this.handleOnChange.bind(this);
@@ -36,6 +37,17 @@ export class CreatePost extends React.Component {
                 title: post.title,
             })
         })
+            .then(res => {
+                if (res.status === 200) {
+                    this.setState({
+                        sending: false,
+                        messageSent: true
+                    })
+                    setTimeout(() => {
+                        this.setState({ messageSent: false })
+                    }, 4000)
+                }
+            })
     }
 
     handleOnChange(e) {
@@ -73,7 +85,7 @@ export class CreatePost extends React.Component {
                 name: '',
                 title: '',
                 post_length: 0,
-                messageSent: true,
+                sending: true,
             })
         } else if (newPost) {
             this.setState({ isNameEmpty: true });
@@ -81,29 +93,22 @@ export class CreatePost extends React.Component {
             this.setState({ isTextEmpty: true });
         }
     }
-    messageSent() {
 
-        if (this.state.messageSent) {
-            setTimeout(() => {
-                this.setState({
-                    messageSent: false,
-                });
-            }, 4000);
-            return (
-                <div id='messageSent'>
-                    Sending...
-                </div>
-            )
-        } else {
-            return;
-        }
-
-    }
     render() {
         return (
             <div className='create-post-container'>
-                {this.messageSent()}
+                {
+                    this.state.sending ?
+                        <div id='messageSent'>
+                            Sending...
+                </div>
+                        :
+                        null
+                }
                 <div className='post-form'>
+
+                    <p className={`message-success ${this.state.messageSent ? 'show-message-success' : ''}`}> Message was sent! </p>
+
                     <form onSubmit={this.handleSubmit}>
                         <textarea
                             rows='13'
