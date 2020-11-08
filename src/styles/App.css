@@ -213,12 +213,9 @@ h2 {
 
 
 #canvas {
-  min-width: 100px;
-  max-width: 1050px;
-  margin: 0 auto;
-  /* border: 1px solid rgb(8, 59, 81); */
-  border-radius: 10px;
-  background: white;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
 }
 
 

@@ -13,7 +13,6 @@ export class About extends React.Component {
                 <p> Hello, my name is Marshall. I am a Web Developer living in Georgetown, TX.</p>
                 <p> I recently graduated <a href='https://flatironschool.com/' target='blank'><strong>FLATIRON's</strong></a> Software Engineering Bootcamp! </p>
                 <div className='about-image-container'>
-                    {/* <img id='profileImg' src={Cabo} alt='me in cabo'></img> */}
                     <PicturesCube pictures={[profile, cabo]} />
                 </div>
             </div>

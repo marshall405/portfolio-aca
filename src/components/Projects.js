@@ -81,18 +81,6 @@ export class Projects extends React.Component {
             <div className='section' id='projects'>
                 <h2> PROJECTS </h2>
                 {this.renderProjects()}
-
-                <div className='project-container'>
-                    <h3> Bouncing Bubbles </h3>
-                    <div className='-container'>
-                        <p> Collision Detection for the WIN!!!</p>
-                        <div className='image-container'>
-                            <Bubbles />
-                        </div>
-                    </div>
-                </div>
-
-
                 <p> More projects coming soon... </p>
             </div>
         )

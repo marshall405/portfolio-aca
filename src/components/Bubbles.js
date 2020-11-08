@@ -2,6 +2,12 @@ import React from 'react';
 import utils from './utils'
 
 export class Bubbles extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+
+        }
+    }
     componentDidMount() {
         this.renderCanvas();
     }
@@ -11,9 +17,9 @@ export class Bubbles extends React.Component {
         const canvas = document.querySelector('canvas')
         const c = canvas.getContext('2d')
 
-        canvas.width = 300;
-        canvas.height = 366
-        let count = 60
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        let count = 20
 
         const mouse = {
             x: canvas.innerWidth / 2,
@@ -29,6 +35,10 @@ export class Bubbles extends React.Component {
             mouse.y = event.offsetY
         })
 
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        })
 
 
         // Objects
@@ -72,7 +82,7 @@ export class Bubbles extends React.Component {
         function init() {
             circles = []
             for (let i = 0; i < count; i++) {
-                let r = 10
+                let r = 20
                 let x = utils.randomIntFromRange(r, canvas.width - r)
                 let y = utils.randomIntFromRange(r, canvas.height - r)
                 if (i !== 0) {
@@ -180,7 +190,7 @@ export class Bubbles extends React.Component {
         animate()
     }
     render() {
-        return <canvas id="canvas" style={{ backgroundColor: this.props.color }}></canvas >
+        return <canvas id="canvas"></canvas >
     }
 
 }

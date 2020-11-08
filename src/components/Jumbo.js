@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 // import styles
 import '../styles/jumbo.css';
 
+import { Bubbles } from './Bubbles';
+
 export class Jumbo extends Component {
 
     componentDidMount() {
@@ -20,6 +22,7 @@ export class Jumbo extends Component {
     render() {
         return (
             <div className='jumbo' id='MS'>
+                <Bubbles />
                 <nav id="nav">
                     <ul id='nav-list'>
                         <li><a href="#about"> about </a></li>
