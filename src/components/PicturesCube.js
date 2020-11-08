@@ -1,4 +1,4 @@
-import React, { useState, Component } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 
@@ -32,9 +32,6 @@ const imgContainer = {
     width: '70%',
 }
 
-const arrow = {
-    fontSize: '3em',
-}
 export default class PicturesCube extends Component {
 
     constructor(props) {
@@ -77,9 +74,9 @@ export default class PicturesCube extends Component {
                     {
                         this.props.pictures.map((picture, index) => {
                             if (this.state.index === index) {
-                                return <img key={index} className="show" style={img} src={picture} />
+                                return <img key={index} className="show" style={img} src={picture} alt="me" />
                             } else {
-                                return <img key={index} className="hide" style={img} src={picture} />
+                                return <img key={index} className="hide" style={img} src={picture} alt="me" />
                             }
                         })
                     }

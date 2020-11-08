@@ -6,7 +6,6 @@ import { Skills } from './components/Skills';
 import { Contact } from './components/Contact';
 import { Projects } from './components/Projects';
 import { Jumbo } from './components/Jumbo';
-import { Blog } from './components/Blog';
 import HelpfulLinks from './components/HelpfulLinks';
 
 // import styles
