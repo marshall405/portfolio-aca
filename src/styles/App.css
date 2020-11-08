@@ -35,6 +35,14 @@ html {
   
   color: rgb(8, 59, 81);
 }
+
+.fa-arrow-left {
+  color: rgba(217, 219, -51, 1);
+}
+
+.fa-arrow-right {
+  color: rgba(45, 90, 121, 1);
+}
 /* Change Button for Canvas */
 
 #changeCanvas {

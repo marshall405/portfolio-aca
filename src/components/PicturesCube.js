@@ -19,6 +19,8 @@ const galleryContainer = {
     alignItems: 'center',
     height: '300px',
     width: '100%',
+    backgroundImage: 'linear-gradient(to right, rgba(45, 90, 121, 1), rgba(217, 219, -51, 1))',
+    borderRadius: '5px'
 }
 const imgContainer = {
     display: 'flex',
@@ -31,7 +33,7 @@ const imgContainer = {
 }
 
 const arrow = {
-    fontSize: '3em'
+    fontSize: '3em',
 }
 export default class PicturesCube extends Component {
 
@@ -40,11 +42,14 @@ export default class PicturesCube extends Component {
         this.state = {
             index: 0
         }
-        this.OnLeftClick = this.OnLeftClick.bind(this)
-        this.OnRightClick = this.OnRightClick.bind(this)
     }
 
-    OnLeftClick() {
+    componentDidMount() {
+        setInterval(() => {
+            this.OnRightClick()
+        }, 5000)
+    }
+    OnLeftClick = () => {
         let index = this.state.index
         if (index - 1 < 0) {
             index = this.props.pictures.length
@@ -53,7 +58,7 @@ export default class PicturesCube extends Component {
             index: index -= 1
         })
     }
-    OnRightClick() {
+    OnRightClick = () => {
         let index = this.state.index
         if (index + 1 >= this.props.pictures.length) {
             index = -1
@@ -72,15 +77,13 @@ export default class PicturesCube extends Component {
                     {
                         this.props.pictures.map((picture, index) => {
                             if (this.state.index === index) {
-                                return <img className="show" style={img} src={picture} />
+                                return <img key={index} className="show" style={img} src={picture} />
                             } else {
-                                return <img className="hide" style={img} src={picture} />
+                                return <img key={index} className="hide" style={img} src={picture} />
                             }
                         })
                     }
                 </div>
-
-                {/* <img style={img} src={this.props.pictures[this.state.index]} /> */}
 
                 <i className="fas fa-arrow-right arrow" onClick={this.OnRightClick}></i>
 
