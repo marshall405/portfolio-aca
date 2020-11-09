@@ -122,6 +122,10 @@ input {
 
 /*        H3 Section Titles     */ 
 
+.break {
+  height: 15px;
+  background-image: linear-gradient(to right, rgba(45, 90, 121, 1), rgba(217, 219, -51, 1));
+}
 h2 {
   font-size: 2em;
   text-decoration-line: underline;

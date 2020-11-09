@@ -10,7 +10,7 @@ export default function WhoAmI() {
         let title = titles[idx]
         let strIdx = 0
         let settingTitle = setInterval(() => {
-            p.innerText += title[strIdx]
+            p.innerHTML += title[strIdx]
             strIdx += 1
             if (strIdx >= title.length) {
                 clearInterval(settingTitle)
@@ -20,7 +20,7 @@ export default function WhoAmI() {
                 }
                 setTimeout(setTitle, 1000)
             }
-        }, 25)
+        }, 30)
     }
     setTimeout(setTitle)
     return (
