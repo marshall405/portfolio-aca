@@ -1,7 +1,7 @@
 import React from 'react';
 import utils from './utils'
 
-export class Bubbles extends React.Component {
+export default class Bubbles extends React.Component {
     constructor(props) {
         super(props)
         this.state = {

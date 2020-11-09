@@ -12,6 +12,7 @@ export class About extends React.Component {
                 <h2> ABOUT </h2>
                 <p> Hello, my name is Marshall. I am a Web Developer living in Georgetown, TX.</p>
                 <p> I recently graduated <a href='https://flatironschool.com/' target='blank'><strong>FLATIRON's</strong></a> Software Engineering Bootcamp! </p>
+                <p> </p>
                 <div className='about-image-container'>
                     <PicturesCube pictures={[profile, cabo]} />
                 </div>

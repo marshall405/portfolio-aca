@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 // import styles
 import '../styles/jumbo.css';
 
-import { Bubbles } from './Bubbles';
+import Bubbles from './Bubbles';
+import WhoAmI from './WhoAmI';
 
 export class Jumbo extends Component {
 
@@ -34,7 +35,12 @@ export class Jumbo extends Component {
                 <div className='inner-jumbo'>
 
                     <h1> marshall slemp </h1>
-                    <p><i className="fas fa-mountain"></i> Full Stack Developer <i className="fas fa-mountain"></i></p>
+                    <div style={{ margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '50%', minWidth: '300px', maxWidth: '400px' }}>
+                        <i className="fas fa-mountain"></i>
+                        <WhoAmI />
+                        <i className="fas fa-mountain"></i>
+                    </div>
+                    {/* <p> Full Stack Developer <i className="fas fa-mountain"></i></p> */}
 
 
                 </div>
