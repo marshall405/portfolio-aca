@@ -1,0 +1,10 @@
+.about-image {
+    border: 1px solid black;
+}
+
+.about-image img {
+    position: relative;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px black;
+}

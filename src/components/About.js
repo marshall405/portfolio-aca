@@ -1,10 +1,9 @@
 import React from 'react';
 
 // import styles
-import PicturesCube from './PicturesCube';
-import '../styles/About.css';
+import AboutPicture from './AboutPicture';
 import profile from '../images/newPic.jpg';
-import cabo from '../images/cabo.jpg';
+
 export class About extends React.Component {
     render() {
         return (
@@ -14,7 +13,7 @@ export class About extends React.Component {
                 <p> I recently graduated <a href='https://flatironschool.com/' target='blank'><strong>FLATIRON's</strong></a> Software Engineering Bootcamp! </p>
                 <p> </p>
                 <div className='about-image-container'>
-                    <PicturesCube pictures={[profile, cabo]} />
+                    <AboutPicture picture={profile} />
                 </div>
             </div>
         )
