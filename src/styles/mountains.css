@@ -8,6 +8,7 @@
     border-bottom: 10px solid rgb(15, 110, 6);
     overflow: hidden;
     z-index: 0;
+    pointer-events: none; 
 }
 .mountain {
     position: absolute;
