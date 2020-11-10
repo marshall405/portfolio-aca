@@ -70,6 +70,9 @@
     border-bottom: 2px solid rgba(205, 227, 37, 0);
 }
 
+.jumbo ul a.active {
+    border-bottom: 2px solid rgb(8, 59, 81);
+}
 
 @keyframes setBackground {
     from {

@@ -13,6 +13,43 @@ import './styles/App.css';
 
 class App extends Component {
 
+
+  componentDidMount() {
+    let ms = document.getElementById('MS')
+    let about = document.getElementById('about')
+    let skills = document.getElementById('skills')
+    let projects = document.getElementById('projects')
+    let contact = document.getElementById('contact')
+
+    function clearActiveLinks() {
+      let links = [...document.querySelectorAll('#navList a')]
+      links.forEach(link => link.classList.remove('active'))
+    }
+    function isInViewPort(ele) {
+      const rect = ele.getBoundingClientRect()
+      return (
+        rect.top >= 0 || (rect.bottom >= 100)
+      )
+    }
+    document.addEventListener('scroll', () => {
+      if (isInViewPort(ms)) {
+        clearActiveLinks()
+      } else if (isInViewPort(about)) {
+        clearActiveLinks()
+        document.querySelector('a[href="#about"').classList.add('active')
+      } else if (isInViewPort(skills)) {
+        clearActiveLinks()
+        document.querySelector('a[href="#skills"').classList.add('active')
+      } else if (isInViewPort(projects)) {
+        clearActiveLinks()
+        document.querySelector('a[href="#projects"').classList.add('active')
+      } else if (isInViewPort(contact)) {
+        clearActiveLinks()
+        document.querySelector('a[href="#contact"').classList.add('active')
+      }
+
+    })
+  }
   render() {
     return (
       <div className='container'>

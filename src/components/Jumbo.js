@@ -25,7 +25,7 @@ export class Jumbo extends Component {
             <div className='jumbo' id='MS'>
                 <Bubbles />
                 <nav id="nav">
-                    <ul id='nav-list'>
+                    <ul id='navList'>
                         <li><a href="#about"> about </a></li>
                         <li><a href="#skills"> skills </a></li>
                         <li><a href="#contact"> contact </a></li>
