@@ -6,7 +6,7 @@ export default function WhoAmI() {
 
     function setTitle() {
         let p = document.getElementById('whoAmI')
-        p.innerText = ""
+        p.innerHTML = ""
         let title = titles[idx]
         let strIdx = 0
         let settingTitle = setInterval(() => {
