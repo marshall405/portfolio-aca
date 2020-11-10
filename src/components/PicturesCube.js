@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 
 const img = {
     width: '250px',
-    maxWidth: '260px',
-    minWidth: '200px',
+    // maxWidth: '260px',
+    // minWidth: '200px',
     height: '96%',
-    margin: '5px',
+    margin: '0px 15px 0 0',
     borderRadius: '5px',
     boxShadow: '2px 2px 5px 1px rgb(58, 58, 58)',
 
@@ -30,7 +30,7 @@ const imgContainer = {
     alignItems: 'center',
     justifyContent: 'space-between',
     height: '100%',
-    width: '70%',
+    width: '260px',
 }
 
 export default class PicturesCube extends Component {
