@@ -1,10 +1,10 @@
 .about-image {
-    border: 1px solid black;
+    text-align: center;
 }
 
 .about-image img {
-    position: relative;
-    width: 200px;
-    border-radius: 5px;
+    width: 220px;
+    filter: grayscale(.7);
+    border-radius: 100px;
     box-shadow: 0px 0px 10px black;
 }
