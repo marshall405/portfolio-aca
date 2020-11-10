@@ -9,8 +9,10 @@
     text-align: center;
     margin: 1rem 3rem;
 }
+
 .skills-container ul li .image img{
     width: 8rem;
+    filter: drop-shadow(2px 4px 8px black);
 }
 .skills-container ul li h3 {
     text-transform: uppercase;
