@@ -3,9 +3,8 @@
     bottom: 0;
     width: 100%;
     height: 100vh;
-    opacity: .9;
-    border: 1px solid black;
-    border-bottom: 10px solid rgb(15, 110, 6);
+    opacity: .8;
+    /* border-bottom: 10px solid rgb(15, 110, 6); */
     overflow: hidden;
     z-index: 0;
     pointer-events: none; 
