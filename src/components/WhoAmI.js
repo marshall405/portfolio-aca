@@ -6,7 +6,6 @@ export default function WhoAmI() {
 
     function setTitle() {
         let p = document.getElementById('whoAmI')
-        p.innerHTML = ""
         let title = titles[idx]
         let strIdx = 0
         let settingTitle = setInterval(() => {
@@ -18,9 +17,20 @@ export default function WhoAmI() {
                 if (idx >= titles.length) {
                     idx = 0
                 }
-                setTimeout(setTitle, 1000)
+                setTimeout(clearTitle, 1000)
             }
         }, 30)
+    }
+
+    function clearTitle() {
+        let p = document.getElementById('whoAmI')
+        let settingTitle = setInterval(() => {
+            p.innerHTML = p.innerHTML.slice(0, p.innerHTML.length - 1)
+            if (p.innerHTML.length === 0) {
+                clearInterval(settingTitle)
+                setTitle()
+            }
+        }, 20)
     }
     setTimeout(setTitle)
     return (
