@@ -123,6 +123,8 @@ input {
 /*        H3 Section Titles     */ 
 
 .break {
+  position: relative;
+  z-index: 1;
   height: 15px;
   background-image: linear-gradient(to right, rgba(45, 90, 121, 1), rgba(217, 219, -51, 1));
 }
@@ -151,6 +153,7 @@ h2 {
   width: 90%;
   padding: 10px 10px;
   position: relative;
+  z-index: 1;
   animation: fadein .5s;
   background-color: rgba(255,255,255,1);
   padding: 30px;
@@ -175,7 +178,7 @@ h2 {
 /*        FOOTER           */
 
 .footer {
-  margin: 20px 0px;
+  margin: 20px 0px 50px 0px;
   position: relative;
   width: 100%;
   padding: 0;

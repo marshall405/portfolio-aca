@@ -8,6 +8,8 @@ import { Projects } from './components/Projects';
 import { Jumbo } from './components/Jumbo';
 import HelpfulLinks from './components/HelpfulLinks';
 
+import Mountains from './components/Mountains';
+
 // import styles
 import './styles/App.css';
 
@@ -31,7 +33,16 @@ class App extends Component {
         rect.top >= 0 || (rect.bottom >= 100)
       )
     }
+    function moveMountains() {
+      let y = window.scrollY
+      let width = window.innerWidth
+      let height = document.body.clientHeight
+      let px = y * (width / height)
+      document.getElementById('mtg1').style.right = `${px}px`
+
+    }
     document.addEventListener('scroll', () => {
+      moveMountains()
       if (isInViewPort(ms)) {
         clearActiveLinks()
       } else if (isInViewPort(about)) {
@@ -73,6 +84,7 @@ class App extends Component {
           </div>
           <h6> Marshall Slemp 2020</h6>
         </div>
+        <Mountains />
       </div>
     )
   }

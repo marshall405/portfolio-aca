@@ -24,6 +24,7 @@
   /* border-radius: 5px; */
     background-color: white;
     position: relative;
+    z-index: 1;
 }
 .jumbo ul li a {
     margin: 5px;
