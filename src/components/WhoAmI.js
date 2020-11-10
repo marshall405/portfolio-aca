@@ -3,9 +3,8 @@ import React from 'react'
 export default function WhoAmI() {
     const titles = ['Full Stack Developer', 'Software Engineer', 'Web Developer', '???????????????']
     let idx = 0
-
+    let p = ""
     function setTitle() {
-        let p = document.getElementById('whoAmI')
         let title = titles[idx]
         let strIdx = 0
         let settingTitle = setInterval(() => {
@@ -23,7 +22,6 @@ export default function WhoAmI() {
     }
 
     function clearTitle() {
-        let p = document.getElementById('whoAmI')
         let settingTitle = setInterval(() => {
             p.innerHTML = p.innerHTML.slice(0, p.innerHTML.length - 1)
             if (p.innerHTML.length === 0) {
@@ -32,6 +30,8 @@ export default function WhoAmI() {
             }
         }, 20)
     }
+
+    setTimeout(() => p = document.getElementById('whoAmI')) // ensures that p element is created before grabbing it
     setTimeout(setTitle)
     return (
         <p id="whoAmI" style={{ height: '20px' }}>
