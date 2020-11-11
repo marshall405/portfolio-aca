@@ -50,7 +50,7 @@
 .mountain-group1 .mt4 {
     height: calc(100vh / 1.50);
     left: calc(100% - 180px);
-    z-index: 1;
+    z-index: 3;
 }
 
 @media (orientation: portrait){
@@ -64,12 +64,12 @@
         left: calc(100% - 120px);
     }
     .mountain-group1 .mt2 {
-        left: calc(100% - 70px);
+        left: calc(100% - 270px);
     }
     .mountain-group1 .mt3 {
-        left: calc(100% - 160px);
+        left: calc(100% - 220px);
     }
     .mountain-group1 .mt4 {
-        left: calc(100% - 80px);
+        left: calc(100% - 10px);
     }
 }
