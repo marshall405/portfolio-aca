@@ -38,7 +38,9 @@ class App extends Component {
       let width = window.innerWidth
       let height = document.body.clientHeight
       let px = y * (width / height)
-      document.getElementById('mtg1').style.right = `${px}px`
+
+      document.getElementById('mtg1').style.right = `${px / 3}px`
+      document.getElementById('mtg2').style.right = `${px}px`
 
     }
     document.addEventListener('scroll', () => {

@@ -11,6 +11,13 @@ export default function Mountains() {
                 <div className="mountain mt3"></div>
                 <div className="mountain mt4"></div>
             </div>
+
+            <div id="mtg2" className="mountain-group2">
+                <div className="mountain mt11"></div>
+                <div className="mountain mt21"></div>
+                <div className="mountain mt31"></div>
+                <div className="mountain mt41"></div>
+            </div>
         </div>
     )
 }
