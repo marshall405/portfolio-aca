@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function WhoAmI() {
-    const titles = ['Full Stack Developer', 'Software Engineer', 'Web Developer', '???????????????']
+    const titles = ['Full Stack Developer', 'Software Engineer', 'Web Developer', 'Gamer']
     let idx = 0
     let p = ""
     function setTitle() {
