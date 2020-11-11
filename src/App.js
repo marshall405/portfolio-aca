@@ -69,15 +69,15 @@ class App extends Component {
         <div className='content-container'>
           <Jumbo />
           <About />
-          <div className="break"></div>
+          {/* <div className="break"></div> */}
           <Skills />
-          <div className="break"></div>
+          {/* <div className="break"></div> */}
           <Projects />
-          <div className="break"></div>
+          {/* <div className="break"></div> */}
           <Contact />
-          <div className="break"></div>
+          {/* <div className="break"></div> */}
           <HelpfulLinks />
-          <div className="break"></div>
+          {/* <div className="break"></div> */}
         </div>
         <div className='footer'>
           <div className='footer-social'>

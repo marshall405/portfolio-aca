@@ -7,6 +7,8 @@
     overflow: hidden;
     z-index: 0; /* default: 0 */
     pointer-events: none; 
+    background-image: linear-gradient(to right, rgba(45, 90, 121, 1), rgba(217, 219, -51, 1));
+
 }
 .mountain {
     position: absolute;
