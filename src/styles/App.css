@@ -178,11 +178,15 @@ h2 {
 /*        FOOTER           */
 
 .footer {
-  margin: 20px 0px 50px 0px;
+  margin: 10px auto;
   position: relative;
-  width: 100%;
-  padding: 0;
+  width: 90%;
+  max-width: 1050px;
+  border-radius: 5px;
+  padding: 5px;
   text-align: center;
+  background-color: rgba(255, 255, 255, .8);
+  z-index: 1;
 }
 .footer h6 {
   font-weight: 100;
@@ -194,13 +198,13 @@ h2 {
 
 .footer-social {
   margin: 15px;
+
 }
 
 .footer-social .nav-icon {
   font-size: 22px;
   margin: 5px 10px;
   color: #706f6f;
-
 }
 
 

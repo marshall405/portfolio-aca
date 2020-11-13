@@ -65,8 +65,29 @@
 .alert {
     border: 2px solid red !important;
 }
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .flex-container input {
+    width: 70%;
     margin-bottom: 10px;
+}
+.flex-container button {
+    width: 70%;
+}
+
+@media (max-width: 600px){
+
+    .create-post-container {
+        width: 100%;
+    }
+    .flex-container input, .flex-container button {
+        width: 100%;
+    }
+    
 }
 
 
