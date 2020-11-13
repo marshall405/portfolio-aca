@@ -36,17 +36,14 @@ export class Jumbo extends Component {
 
                     <h1> marshall slemp </h1>
                     <div style={{ margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '50%', minWidth: '300px', maxWidth: '400px' }}>
-                        <i className="fas fa-mountain"></i>
+                        <a href='https://www.linkedin.com/in/marshall-slemp/' target='_blank' rel="noopener noreferrer" className='nav-icon'><i className="fab fa-linkedin-in"></i></a>
                         <WhoAmI />
-                        <i className="fas fa-mountain"></i>
+                        <a href='https://github.com/marshall405' target='_blank' rel="noopener noreferrer" className='nav-icon'><i className="fab fa-github"></i></a>
+
                     </div>
                     {/* <p> Full Stack Developer <i className="fas fa-mountain"></i></p> */}
 
 
-                </div>
-                <div className='social'>
-                    <a href='https://www.linkedin.com/in/marshall-slemp/' target='_blank' rel="noopener noreferrer" className='nav-icon'><i className="fab fa-linkedin-in"></i></a>
-                    <a href='https://github.com/marshall405' target='_blank' rel="noopener noreferrer" className='nav-icon'><i className="fab fa-github"></i></a>
                 </div>
             </div>
         )

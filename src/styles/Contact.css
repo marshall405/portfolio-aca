@@ -1,7 +1,7 @@
 #contact p a {
-    color: rgb(8, 59, 81);
+    color: var(--primary-lightblue);
 }
 
 #contact p a:hover {
-    border-bottom: 2px solid rgb(8, 59, 81);
+    border-bottom: 2px solid var(--primary-lightblue);
 }

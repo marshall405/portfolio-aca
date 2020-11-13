@@ -19,7 +19,7 @@ export default class Bubbles extends React.Component {
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        let count = 20
+        let count = 3
 
         const mouse = {
             x: canvas.innerWidth / 2,
@@ -82,7 +82,7 @@ export default class Bubbles extends React.Component {
         function init() {
             circles = []
             for (let i = 0; i < count; i++) {
-                let r = 20
+                let r = 75
                 let x = utils.randomIntFromRange(r, canvas.width - r)
                 let y = utils.randomIntFromRange(r, canvas.height - r)
                 if (i !== 0) {

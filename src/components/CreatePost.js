@@ -110,7 +110,9 @@ export class CreatePost extends React.Component {
                     <p className={`message-success ${this.state.messageSent ? 'show-message-success' : ''}`}> Message was sent! </p>
 
                     <form onSubmit={this.handleSubmit}>
+                        <label className={this.state.post.length > 0 ? 'show-label' : null} htmlFor="post"> message </label>
                         <textarea
+                            id="post"
                             rows='13'
                             cols='50'
                             placeholder='message'
@@ -121,20 +123,30 @@ export class CreatePost extends React.Component {
                         </textarea>
                         <p> {1500 - this.state.post_length} characters remaining</p>
                         <div className='flex-container'>
-                            <input
-                                type='email'
-                                placeholder='email'
-                                value={this.state.title}
-                                className={this.state.isTitleEmpty ? 'alert' : ''}
-                                onChange={this.handleTitleChange}
-                            />
-                            <input
-                                type='text'
-                                placeholder='name'
-                                value={this.state.name}
-                                className={this.state.isNameEmpty ? 'alert' : ''}
-                                onChange={this.handleNameChange}
-                            />
+                            <div>
+                                <div className="label-inputs">
+                                    <label className={this.state.title.length > 0 ? 'show-label' : null} htmlFor="email"> email </label>
+                                    <input
+                                        id="email"
+                                        type='email'
+                                        placeholder='email'
+                                        value={this.state.title}
+                                        className={this.state.isTitleEmpty ? 'alert' : ''}
+                                        onChange={this.handleTitleChange}
+                                    />
+                                </div>
+                                <div className="label-inputs">
+                                    <label className={this.state.name.length > 0 ? 'show-label' : null} htmlFor="name"> name </label>
+                                    <input
+                                        id="name"
+                                        type='text'
+                                        placeholder='name'
+                                        value={this.state.name}
+                                        className={this.state.isNameEmpty ? 'alert' : ''}
+                                        onChange={this.handleNameChange}
+                                    />
+                                </div>
+                            </div>
                             <button type='submit'> Send Message </button>
 
                         </div>

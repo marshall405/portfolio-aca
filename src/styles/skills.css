@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    align-items: center;
 }
 
 .skills-container ul li {
@@ -17,4 +17,16 @@
 .skills-container ul li h3 {
     text-transform: uppercase;
     font-size: .8em;
+}
+@media (max-width: 600px){
+
+    .skills-container ul li {
+        margin: 1rem 3rem;
+    }
+    .skills-container ul li h3 {
+        display: none;
+    }
+    .skills-container ul li .image img {
+        width: 4em;
+    }
 }
