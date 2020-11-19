@@ -1,4 +1,4 @@
 # [marshallslemp.com](http://www.marshallslemp.com)
 
 ![Image of Website]
-(./src/images/screenshot.png)
+<img src="./src/images/screenshot.png" alt="screenshot of marshallslemp.com">
