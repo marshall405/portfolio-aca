@@ -64,8 +64,8 @@ export class Projects extends React.Component {
                 <div className='-container'>
                     <p> {project.desc} </p>
                     <div className='image-container'>
-                        <a href={project.link} target=''> <img src={project.img} alt={project.desc} /> </a>
-                        <a href={project.link} target=''> view project </a>
+                        <a href={project.link} target='_blank'> <img src={project.img} alt={project.desc} /> </a>
+                        <a href={project.link} target='_blank'> view project </a>
                     </div>
                 </div>
 
