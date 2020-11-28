@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import { JackInTheBox } from 'react-awesome-reveal'
 // import styles
 import '../styles/jumbo.css';
 
@@ -33,18 +34,18 @@ export class Jumbo extends Component {
                     </ul>
                 </nav>
                 <div className='inner-jumbo'>
+                    <JackInTheBox>
+                        <h1> marshall slemp </h1>
+                        <div style={{ margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '50%', minWidth: '300px', maxWidth: '400px' }}>
+                            <a href='https://www.linkedin.com/in/marshall-slemp/' target='_blank' rel="noopener noreferrer" className='nav-icon'><i className="fab fa-linkedin-in"></i></a>
+                            <WhoAmI />
+                            <a href='https://github.com/marshall405' target='_blank' rel="noopener noreferrer" className='nav-icon'><i className="fab fa-github"></i></a>
 
-                    <h1> marshall slemp </h1>
-                    <div style={{ margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '50%', minWidth: '300px', maxWidth: '400px' }}>
-                        <a href='https://www.linkedin.com/in/marshall-slemp/' target='_blank' rel="noopener noreferrer" className='nav-icon'><i className="fab fa-linkedin-in"></i></a>
-                        <WhoAmI />
-                        <a href='https://github.com/marshall405' target='_blank' rel="noopener noreferrer" className='nav-icon'><i className="fab fa-github"></i></a>
-
-                    </div>
-                    {/* <p> Full Stack Developer <i className="fas fa-mountain"></i></p> */}
-
-
+                        </div>
+                        {/* <p> Full Stack Developer <i className="fas fa-mountain"></i></p> */}
+                    </JackInTheBox>
                 </div>
+
             </div>
         )
     }
