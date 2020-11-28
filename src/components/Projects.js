@@ -2,6 +2,7 @@ import React from 'react';
 // import style
 import '../styles/Projects.css';
 
+import { Fade } from 'react-awesome-reveal'
 // import images
 import weather from '../images/weather.png';
 import snake from '../images/snake.png';
@@ -61,14 +62,15 @@ export class Projects extends React.Component {
         return projects.map((project, index) => {
             return <div key={index} className='project-container'>
                 <h3> {project.title} </h3>
-                <div className='-container'>
-                    <p> {project.desc} </p>
-                    <div className='image-container'>
-                        <a href={project.link} target='_blank'> <img src={project.img} alt={project.desc} /> </a>
-                        <a href={project.link} target='_blank'> view project </a>
+                <Fade>
+                    <div className='-container'>
+                        <p> {project.desc} </p>
+                        <div className='image-container'>
+                            <a href={project.link} target='_blank'> <img src={project.img} alt={project.desc} /> </a>
+                            <a href={project.link} target='_blank'> view project </a>
+                        </div>
                     </div>
-                </div>
-
+                </Fade>
             </div>
         })
 
