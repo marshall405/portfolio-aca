@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { JackInTheBox } from 'react-awesome-reveal'
+import { JackInTheBox, AttentionSeeker } from 'react-awesome-reveal'
 // import styles
 import '../styles/jumbo.css';
 
@@ -24,7 +24,7 @@ export class Jumbo extends Component {
     render() {
         return (
             <div className='jumbo' id='MS'>
-                <Bubbles />
+                {/* <Bubbles /> */}
                 <nav id="nav">
                     <ul id='navList'>
                         <li><a href="#about"> about </a></li>
