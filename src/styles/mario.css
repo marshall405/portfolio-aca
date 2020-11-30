@@ -1,0 +1,10 @@
+.mario {
+    position: fixed;
+    top: 0;
+    z-index: -10;
+}
+
+.mario img {
+    position: relative;
+    height: 100vh;
+}

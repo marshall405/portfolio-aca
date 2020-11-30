@@ -14,10 +14,16 @@ import Mountains from './components/Mountains';
 
 // import styles
 import './styles/App.css';
+import './styles/mario.css';
 
+import Mario from './images/mario.jpg'
 class App extends Component {
 
-
+  constructor(props) {
+    super(props)
+    this.mario = React.createRef()
+    this.moveMountains = this.moveMountains.bind(this)
+  }
   componentDidMount() {
     let ms = document.getElementById('MS')
     let about = document.getElementById('about')
@@ -35,18 +41,9 @@ class App extends Component {
         rect.top >= 0 || (rect.bottom >= 100)
       )
     }
-    function moveMountains() {
-      let y = window.scrollY
-      let width = window.innerWidth
-      let height = document.body.clientHeight
-      let px = y * (width / height)
 
-      document.getElementById('mtg1').style.right = `${px / 3}px`
-      document.getElementById('mtg2').style.right = `${px}px`
-
-    }
     document.addEventListener('scroll', () => {
-      moveMountains()
+      this.moveMountains()
       if (isInViewPort(ms)) {
         clearActiveLinks()
       } else if (isInViewPort(about)) {
@@ -64,6 +61,18 @@ class App extends Component {
       }
 
     })
+  }
+  moveMountains() {
+    let y = window.scrollY
+    let width = this.mario.current.width
+    // let width = window.innerWidth
+    let height = document.body.clientHeight + window.innerHeight + 1700
+    let px = y * (width / height)
+    // document.getElementById('marioImg').style.left = `${-px}px`
+    this.mario.current.style.left = `${-px}px`
+    // document.getElementById('mtg1').style.right = `${px / 3}px`
+    // document.getElementById('mtg2').style.right = `${px}px`
+
   }
   render() {
     return (
@@ -91,7 +100,10 @@ class App extends Component {
           </div>
           <h6> Marshall Slemp 2020</h6>
         </div>
-        <Mountains />
+        <div className="mario">
+          <img ref={this.mario} id="marioImg" src={Mario} />
+        </div>
+        {/* <Mountains /> */}
       </div>
     )
   }
