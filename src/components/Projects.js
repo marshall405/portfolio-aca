@@ -62,15 +62,13 @@ export class Projects extends React.Component {
         return projects.map((project, index) => {
             return <div key={index} className='project-container'>
                 <h3> {project.title} </h3>
-                <Fade>
-                    <div className='-container'>
-                        <p> {project.desc} </p>
-                        <div className='image-container'>
-                            <a href={project.link} target='_blank'> <img src={project.img} alt={project.desc} /> </a>
-                            <a href={project.link} target='_blank'> view project </a>
-                        </div>
+                <div className='-container'>
+                    <p> {project.desc} </p>
+                    <div className='image-container'>
+                        <a href={project.link} target='_blank'> <img src={project.img} alt={project.desc} /> </a>
+                        <a href={project.link} target='_blank'> view project </a>
                     </div>
-                </Fade>
+                </div>
             </div>
         })
 
