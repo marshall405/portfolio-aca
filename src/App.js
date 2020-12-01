@@ -89,7 +89,7 @@ class App extends Component {
             {/* <div className="break"></div> */}
             <Contact />
             {/* <div className="break"></div> */}
-            <HelpfulLinks />
+            {/* <HelpfulLinks /> */}
             {/* <div className="break"></div> */}
           </Fade>
         </div>
