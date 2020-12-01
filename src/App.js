@@ -64,9 +64,9 @@ class App extends Component {
   }
   moveMountains() {
     let y = window.scrollY
-    let width = this.mario.current.width
+    let width = this.mario.current.width - window.innerWidth
     // let width = window.innerWidth
-    let height = document.body.clientHeight + window.innerHeight + 1700
+    let height = document.body.clientHeight - window.innerHeight
     let px = y * (width / height)
     // document.getElementById('marioImg').style.left = `${-px}px`
     this.mario.current.style.left = `${-px}px`
