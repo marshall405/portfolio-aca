@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Texturina:wght@100&display=swap');
 #about p{
+    font-family: 'Texturina', serif;
     text-align: center;
     font-size: 1.2em;
 }

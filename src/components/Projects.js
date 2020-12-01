@@ -78,7 +78,6 @@ export class Projects extends React.Component {
             <div className='section' id='projects'>
                 <h2> PROJECTS </h2>
                 {this.renderProjects()}
-                <p> More projects coming soon... </p>
             </div>
         )
     }
