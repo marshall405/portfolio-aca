@@ -17,19 +17,8 @@
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    text-align: left;
+    text-align: center;
     color: rgb(114, 165, 187);
-    text-decoration: underline;
-    text-decoration-color: rgb(255,255,0);
-}
-.project-container a {
-    text-decoration: underline;
-    text-decoration-color: rgba(255,255,0,0);
-    /* color: rgb(114, 165, 187); */
-    color: var(--primary-lightblue);
-}
-.project-container a:hover {
-    text-decoration-color: rgb(255,255,0);
 }
 
 .project-container p {
@@ -41,10 +30,11 @@
 }
 .project-container img {
     /* max-width: 350px; */
+    margin: 0;
     object-fit: cover;
     object-position: 50% 0;
     height: 300px;
-    width: 90%;
+    width: 100%;
     border-radius: 10px;
     filter: brightness(60%);
     box-shadow: 0px 0px 2px #FFF;
@@ -60,24 +50,41 @@
 }
 .project-container:nth-child(odd) .-container {
     flex-direction: row-reverse;
+
 }
-.-container > p {
+.-container div {
     flex: 1;
+    margin: 0 15px;
 }
-.-container > div {
-    flex: 1;
+.image-container {
+    text-align: center;
 }
 
-.image-container > *{
-    display: block;
+.project-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 690px){
+    .project-container {
+        padding: 0;
+    }
     .-container {
-        display: block;
+        flex-direction: column-reverse;
+    }
+    .project-container:nth-child(odd) .-container {
+        flex-direction: column-reverse;
+    
+    }
+    .project-container img {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        box-shadow: none;
+        filter: brightness(100%);
     }
 
-    .project-container img {
-        filter: brightness(100%);
+    .-container div {
+        margin: 0;
     }
 }
