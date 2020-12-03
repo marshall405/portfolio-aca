@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap');
 .project-container {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
     margin: 10px 0px;
     padding: 10px;
     border-radius: 10px;
@@ -9,6 +11,12 @@
 
 }
 .project-container h3 {
+    font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     text-align: left;
     color: rgb(114, 165, 187);
     text-decoration: underline;
@@ -26,12 +34,17 @@
 
 .project-container p {
     /* border-bottom: 1px solid rgb(8, 59, 81); */
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
     font-size: 1em !important;
+    letter-spacing: 1.2px;
 }
 .project-container img {
-    max-width: 350px;
+    /* max-width: 350px; */
+    object-fit: cover;
+    object-position: 50% 0;
     height: 300px;
-    width: 80%;
+    width: 90%;
     border-radius: 10px;
     filter: brightness(60%);
     box-shadow: 0px 0px 2px #FFF;
@@ -40,10 +53,13 @@
     filter: brightness(100%);
 }
 
-.-container {
+.-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.project-container:nth-child(odd) .-container {
+    flex-direction: row-reverse;
 }
 .-container > p {
     flex: 1;
