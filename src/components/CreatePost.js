@@ -25,7 +25,7 @@ export class CreatePost extends React.Component {
         this.addNewPost = this.addNewPost.bind(this);
     }
     addNewPost(post) {
-        fetch('http://127.0.0.1:8001/dashboard/api/email.php', {
+        fetch('/email.php', {
             method: 'POST',
             body: JSON.stringify({
                 post: post.post,
