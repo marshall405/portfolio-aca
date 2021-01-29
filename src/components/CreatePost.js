@@ -16,6 +16,7 @@ export class CreatePost extends React.Component {
             isTextEmpty: false,
             sending: false,
             messageSent: false,
+            messageErr: false
         }
         this.handleOnChange = this.handleOnChange.bind(this);
         this.handleNameChange = this.handleNameChange.bind(this);
@@ -24,28 +25,27 @@ export class CreatePost extends React.Component {
         this.addNewPost = this.addNewPost.bind(this);
     }
     addNewPost(post) {
-        fetch('https://lit-mountain-55987.herokuapp.com/api/createpost', {
+        fetch('http://127.0.0.1:8001/dashboard/api/email.php', {
             method: 'POST',
-            headers: {
-                "Content-Type": "application/json; charset=utf-8",
-            },
             body: JSON.stringify({
                 post: post.post,
                 name: post.name,
-                position: null,
-                createdOn: FormatDate(),
-                title: post.title,
+                email: post.title,
+                submit: true
             })
         })
-            .then(res => {
-                if (res.status === 200) {
+            .then(res => res.json())
+            .then(json => {
+                if(json.err){
+                    this.setState({
+                        messageErr: json.err,
+                        sending: false,
+                    })
+                }else {
                     this.setState({
                         sending: false,
                         messageSent: true
                     })
-                    setTimeout(() => {
-                        this.setState({ messageSent: false })
-                    }, 4000)
                 }
             })
     }
@@ -108,6 +108,7 @@ export class CreatePost extends React.Component {
                 <div className='post-form'>
 
                     <p className={`message-success ${this.state.messageSent ? 'show-message-success' : ''}`}> Message was sent! </p>
+                    <p className={`message-error ${this.state.messageErr ? 'show-message-error' : ''}`}> {this.state.messageErr} </p>
 
                     <form onSubmit={this.handleSubmit}>
                         <label className={this.state.post.length > 0 ? 'show-label' : null} htmlFor="post"> message </label>

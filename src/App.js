@@ -43,6 +43,7 @@ class App extends Component {
     }
 
     document.addEventListener('scroll', () => {
+      // window.scrollTo(0, window.scrollY + 100)
       this.moveMountains()
       if (isInViewPort(ms)) {
         clearActiveLinks()
