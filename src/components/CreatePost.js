@@ -10,27 +10,28 @@ export class CreatePost extends React.Component {
             post_length: 0,
             post: '',
             name: '',
-            title: '',
+            email: '',
             isNameEmpty: false,
-            isTitleEmpty: false,
-            isTextEmpty: false,
+            isEmailEmpty: false,
+            isPostEmpty: false,
             sending: false,
             messageSent: false,
             messageErr: false
         }
         this.handleOnChange = this.handleOnChange.bind(this);
         this.handleNameChange = this.handleNameChange.bind(this);
-        this.handleTitleChange = this.handleTitleChange.bind(this);
+        this.handleEmailChange = this.handleEmailChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.addNewPost = this.addNewPost.bind(this);
     }
     addNewPost(post) {
-        fetch('/email.php', {
+        let dev = 'http://127.0.0.1:8001/dashboard/api/email.php';
+        fetch('email.php', {
             method: 'POST',
             body: JSON.stringify({
                 post: post.post,
                 name: post.name,
-                email: post.title,
+                email: post.email,
                 submit: true
             })
         })
@@ -47,6 +48,13 @@ export class CreatePost extends React.Component {
                         messageSent: true
                     })
                 }
+                setTimeout(() => {
+                    document.querySelectorAll(".show-message").forEach( ele => ele.classList.remove('show-message'))
+                    this.setState({
+                        messageErr: false,
+                        messageSent: false
+                    })
+                }, 4000)
             })
     }
 
@@ -56,7 +64,7 @@ export class CreatePost extends React.Component {
         this.setState({
             post_length: length,
             post: post,
-            isTextEmpty: false
+            isPostEmpty: false
         });
     }
     handleNameChange(e) {
@@ -66,31 +74,43 @@ export class CreatePost extends React.Component {
             isNameEmpty: false
         });
     }
-    handleTitleChange(e) {
-        const title = e.target.value;
+    handleEmailChange(e) {
+        const email = e.target.value;
         this.setState({
-            title: title,
-            isTitleEmpty: false
+            email: email,
+            isEmailEmpty: false
         });
     }
     handleSubmit(e) {
         e.preventDefault();
-        const newPost = this.state.post.trim();
+        const post = this.state.post.trim();
         const name = this.state.name.trim();
-        const title = this.state.title.trim();
-        if (newPost && name && title) {
-            this.addNewPost({ post: newPost, name: name, title: title });
+        const email = this.state.email.trim();
+        if (post && name && email) {
+            this.addNewPost({ post: post, name: name, email: email });
             this.setState({
                 post: '',
                 name: '',
-                title: '',
+                email: '',
                 post_length: 0,
                 sending: true,
             })
-        } else if (newPost) {
-            this.setState({ isNameEmpty: true });
-        } else {
-            this.setState({ isTextEmpty: true });
+            return;
+        }
+        if(!post){
+            this.setState({
+                isPostEmpty: true
+            })
+        }
+        if(!name){
+            this.setState({
+                isNameEmpty: true
+            })
+        }
+        if(!email){
+            this.setState({
+                isEmailEmpty: true
+            })
         }
     }
 
@@ -107,8 +127,8 @@ export class CreatePost extends React.Component {
                 }
                 <div className='post-form'>
 
-                    <p className={`message-success ${this.state.messageSent ? 'show-message-success' : ''}`}> Message was sent! </p>
-                    <p className={`message-error ${this.state.messageErr ? 'show-message-error' : ''}`}> {this.state.messageErr} </p>
+                    <p className={`message-success message ${this.state.messageSent ? 'show-message' : ''}`}> Message was sent! </p>
+                    <p className={`message-error message ${this.state.messageErr ? 'show-message' : ''}`}> {this.state.messageErr || 'Error'} </p>
 
                     <form onSubmit={this.handleSubmit}>
                         <label className={this.state.post.length > 0 ? 'show-label' : null} htmlFor="post"> message </label>
@@ -120,20 +140,20 @@ export class CreatePost extends React.Component {
                             maxLength='1500'
                             onChange={this.handleOnChange}
                             value={this.state.post}
-                            className={this.state.isTextEmpty ? 'alert' : ''}>
+                            className={this.state.isPostEmpty ? 'alert' : ''}>
                         </textarea>
                         <p> {1500 - this.state.post_length} characters remaining</p>
                         <div className='flex-container'>
                             <div>
                                 <div className="label-inputs">
-                                    <label className={this.state.title.length > 0 ? 'show-label' : null} htmlFor="email"> email </label>
+                                    <label className={this.state.email.length > 0 ? 'show-label' : null} htmlFor="email"> email </label>
                                     <input
                                         id="email"
                                         type='email'
                                         placeholder='email'
-                                        value={this.state.title}
-                                        className={this.state.isTitleEmpty ? 'alert' : ''}
-                                        onChange={this.handleTitleChange}
+                                        value={this.state.email}
+                                        className={this.state.isEmailEmpty ? 'alert' : ''}
+                                        onChange={this.handleEmailChange}
                                     />
                                 </div>
                                 <div className="label-inputs">
